@@ -1,19 +1,39 @@
 export const teamMembers = [
   {
-    slug: "jargalan-byambatsogt",
-    image: "/images/team-avatar-jargalan.png",
+    slug: "lkhagvasuren-ganbold",
+    image: "/images/team-lkhagvasuren.avif",
   },
   {
-    slug: "dulguun-erdenebulgan",
-    image: "/images/team-avatar-dulguun.png",
+    slug: "bat-erdene-bayarsaikhan",
+    image: "/images/team-bat-erdene.avif",
   },
   {
-    slug: "byambadorj-dorjsuren",
-    image: "/images/team-avatar-byambadorj.png",
+    slug: "erdenebold-tsegmid",
+    image: "/images/team-erdenebold.avif",
   },
   {
-    slug: "badamsuren-urtnasan",
-    image: "/images/team-avatar-badamsuren.png",
+    slug: "myadagmaa-bat-erdene",
+    image: "/images/team-avatar-badamsuren.avif",
+  },
+  {
+    slug: "ariunsanaa-oyun-erdene",
+    image: "/images/team-ariunsanaa.avif",
+  },
+  {
+    slug: "narangerel-amarsaikhan",
+    image: "/images/team-narangerel.avif",
+  },
+  {
+    slug: "dugarmaa-enkhbat",
+    image: "/images/team-dugarmaa.avif",
+  },
+  {
+    slug: "bayarmaa-nyamlhagva",
+    image: "/images/team-bayarmaa.avif",
+  },
+  {
+    slug: "khuslen-gantor",
+    image: "/images/team-khuslen.avif",
   },
 ] as const;
 

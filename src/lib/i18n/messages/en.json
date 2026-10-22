@@ -149,17 +149,6 @@
       "quote": "Legal services are a strategic tool that enables you to foresee risks three moves ahead.",
       "quoteMeta": "Founding Partner and Attorney · 2025.06.10 · Read the Interview"
     },
-    "leaders": {
-      "eyebrow": "Our Professional Team",
-      "title": "Lawyers you can trust",
-      "text": "A team specializing in disputes and legal advisory services.",
-      "litigationAlt": "Litigation attorneys",
-      "litigationTitle": "Litigation Team",
-      "litigationText": "Advocacy and legal representation",
-      "advisoryAlt": "Legal advisory team",
-      "advisoryTitle": "Legal Advisory Team",
-      "advisoryText": "Business and retained legal counsel"
-    },
     "contactImageAlt": "Legal documents with a judge's gavel and scales of justice"
   },
   "about": {
@@ -341,33 +330,159 @@
     "teamNote": "The firm profile states that the team comprises 12 lawyers, while the June 2025 interview refers to 4 attorneys and 6 legal assistants. Named profiles will be published here once the current roster has been confirmed.",
     "members": {
       "viewProfile": "View Profile",
-      "backToTeam": "Back to Our Team",
-      "profileEyebrow": "Our Team",
-      "intro": "We develop practical legal solutions through close teamwork and careful research tailored to each client’s needs.",
-      "firmLabel": "Firm",
-      "practiceLabel": "Services",
-      "practiceValue": "Advocacy · Representation · Legal Advisory",
+      "backToTeam": "Back",
       "contactEyebrow": "Work With Us",
       "contactTitle": "Get in Touch",
       "contactText": "Send us a brief outline of your matter by email, and we will arrange the most suitable way to connect.",
       "emailLabel": "Email Us",
       "facebookLabel": "Facebook page",
       "instagramLabel": "Instagram page",
-      "jargalan-byambatsogt": {
-        "name": "Jargalan Byambatsogt",
-        "role": "Senior Associate"
+      "lkhagvasuren-ganbold": {
+        "name": "G. Lkhagvasuren",
+        "role": "Founder, Executive Director, Attorney at Law",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Lkhagvasuren Ganbold is the Founder and Executive Director of Tsets Partners Law Firm. He is an attorney at law with 12 years of experience specializing in insurance law and business law."
+          },
+          {
+            "type": "paragraph",
+            "text": "He holds a Master of Laws (LL.M.) from Ikh Zasag Law School and a Master of Business Administration (MBA) from the University of Finance and Economics (UFE). He is currently a Ph.D. candidate at the School of Law, National University of Mongolia. He is a member of the Mongolian Bar Association and the Association of Mongolian Advocates."
+          },
+          {
+            "type": "paragraph",
+            "text": "Since 2025, he has been serving as an arbitrator at the Mongolian International Arbitration Center, and in 2026, he was appointed as an arbitrator at the Mongolian International and National Sports Arbitration."
+          }
+        ]
       },
-      "dulguun-erdenebulgan": {
-        "name": "Dulguun Erdenebulgan",
-        "role": "Associate"
+      "bat-erdene-bayarsaikhan": {
+        "name": "B. Bat-Erdene",
+        "role": "Co-Founder, Attorney at Law",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Bat-Erdene Bayarsaikhan is a Co-Founder of Tsets Partners Law Firm. He is an attorney at law with 12 years of experience specializing in criminal law, business law, and corporate law. He holds a Bachelor's and Master's degree in Law from Ikh Zasag Law School. He is a member of the Mongolian Bar Association and the Association of Mongolian Advocates."
+          }
+        ]
       },
-      "byambadorj-dorjsuren": {
-        "name": "Byambadorj Dorjsuren",
-        "role": "Associate"
+      "erdenebold-tsegmid": {
+        "name": "Ts. Erdenebold",
+        "role": "Legal Counsel",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Erdenebold Tsegmid graduated from Kyiv State University (USSR) as an International Lawyer and from the University of Leeds (UK) as an English Translator. He holds Ph.D. degrees from the Institute of State and Law of the Russian Academy of Sciences and The George Washington University (USA)."
+          },
+          { "type": "heading", "text": "Work Experience" },
+          {
+            "type": "paragraph",
+            "text": "He brings extensive expertise from working in legal advisory and executive management roles across public, private, and international sectors:"
+          },
+          {
+            "type": "bullet",
+            "text": "Public & International Sectors: He served in key roles including Referent at the Secretariat of the Presidium of the People's Great Hural, Foreign Policy Advisor to the Parliament (State Great Hural) of Mongolia, Head of the Foreign Relations Department of the Governor's Office of Ulaanbaatar City, and Advisor to the Minister of Mining and Heavy Industry. Additionally, he managed international trade, GATT, and UNCITRAL projects for the World Bank, Asian Development Bank, European Bank for Reconstruction and Development (EBRD), and the United Nations Development Programme (UNDP), where he continues to serve as a contracted translator."
+          },
+          {
+            "type": "bullet",
+            "text": "Legal Sector & Consulting: He represented the U.S. law firm \"Buxbaum & Choy,\" pioneering international consulting services in Mongolia. He co-founded the international law firm \"New Grata JLPV\" with foreign lawyers and served as its Executive Director. His track record includes assisting \"Energy Resources\" LLC with its IPO on the Hong Kong Stock Exchange, aiding Mongolian companies in listing on the U.S. NASDAQ, and serving as an international legal advisor for the power plant project of \"Erdenes Tavan Tolgoi\" JSC. Most recently, he served as Head of the Legal Department at \"New Ulaanbaatar International Airport\" LLC."
+          },
+          {
+            "type": "bullet",
+            "text": "Academic & Research Work: He has served as Director of the School of Humanities at the Mongolian University of Science and Technology (MUST), Visiting Professor at Mahidol University in Thailand, and Professor at both the National University of Mongolia and City University, contributing significantly to training the next generation of lawyers. Over his career, he has published more than 20 books, textbooks, and academic articles."
+          },
+          {
+            "type": "paragraph",
+            "text": "Awards: He was awarded the state honor \"Order of the Polar Star\" (Altan Gadas) and the title of \"Leading Worker of Education.\""
+          },
+          {
+            "type": "paragraph",
+            "text": "He is fluent in Mongolian, Russian, and English, and has working knowledge of French."
+          }
+        ]
       },
-      "badamsuren-urtnasan": {
-        "name": "Badamsuren Urtnasan",
-        "role": "Associate"
+      "myadagmaa-bat-erdene": {
+        "name": "B. Myadagmaa",
+        "role": "Attorney at Law",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Myadagmaa Bat-Erdene is an attorney at law with 10 years of experience specializing in corporate law, labor law, and legal consulting. At Tsets Partners Law Firm, she works on corporate consulting, corporate documentation compliance, and represents clients in inter-company disputes. She graduated with a degree in law from Ikh Zasag Law School. She is a member attorney of the Mongolian Bar Association and the Association of Mongolian Advocates."
+          }
+        ]
+      },
+      "ariunsanaa-oyun-erdene": {
+        "name": "O. Ariunsanaa",
+        "role": "Attorney Assistant",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Ariunsanaa Oyun-Erdene graduated with a degree in law from Ikh Zasag Law School."
+          },
+          {
+            "type": "paragraph",
+            "text": "She provides support to the firm's attorneys and management team. Her core responsibilities include representing clients in civil and administrative courts under power of attorney, drafting and reviewing various official correspondence, documents, and contracts, as well as preparing and submitting petitions, requests, and complaints to Mongolian state and local government administrative bodies."
+          },
+          {
+            "type": "paragraph",
+            "text": "She is fluent in Mongolian and English, and has working knowledge of Korean."
+          }
+        ]
+      },
+      "narangerel-amarsaikhan": {
+        "name": "A. Narangerel",
+        "role": "Attorney Assistant",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Narangerel Amarsaikhan holds a Bachelor of Laws (LL.B.) degree from Ikh Zasag Law School."
+          },
+          {
+            "type": "paragraph",
+            "text": "She provides comprehensive legal support to the firm's attorneys, management team, and clients. Her core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official correspondence, contracts, and other legal documentation."
+          }
+        ]
+      },
+      "dugarmaa-enkhbat": {
+        "name": "E. Dugarmaa",
+        "role": "Attorney Assistant",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Dugarmaa Enkhbat holds a Bachelor of Laws (LL.B.) degree from the Law School of Ikh Zasag International University. She also specialized in Human Resources and Business Administration at the Mongolian HR Reform Academy."
+          },
+          {
+            "type": "paragraph",
+            "text": "She provides comprehensive legal support to the firm's attorneys, management team, and clients. Her core responsibilities include assisting attorneys with civil and administrative litigation, court representation, drafting various official letters and documents, and handling requests and complaints directed to Mongolian state and local administrative organizations."
+          }
+        ]
+      },
+      "bayarmaa-nyamlhagva": {
+        "name": "N. Bayarmaa",
+        "role": "Attorney Assistant",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Bayarmaa Nyamlhagva holds a Bachelor of Laws (LL.B.) degree from Ikh Zasag Law School."
+          },
+          {
+            "type": "paragraph",
+            "text": "She provides comprehensive legal support to the firm's attorneys, management team, and clients. Her core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official letters, contracts, and other legal documentation."
+          }
+        ]
+      },
+      "khuslen-gantor": {
+        "name": "G. Khuslen",
+        "role": "Attorney Assistant",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Khuslen Gantor holds a Bachelor of Laws (LL.B.) degree from Ikh Zasag Law School."
+          },
+          {
+            "type": "paragraph",
+            "text": "He provides comprehensive legal support to the firm's attorneys, management team, and clients. His core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official letters, contracts, and other legal documentation."
+          }
+        ]
       }
     },
     "groups": [

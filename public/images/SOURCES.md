@@ -5,7 +5,7 @@ Downloaded on 2026-10-20 and 2026-10-22. These stock photos illustrate the firm'
 | Local file | Service | Photographer | Original photo |
 | --- | --- | --- | --- |
 | `litigation.jpg` | Шүүхийн өмгөөлөл | Sora Shimazaki | [Justice Scales and Gavel on Wooden Surface](https://www.pexels.com/photo/justice-scales-and-gavel-on-wooden-surface-5668882/) |
-| `business-advice.jpg` | Бизнесийн зөвлөгөө | Werner Pfennig | [Black Monitors on Wooden Table in a Conference Room](https://www.pexels.com/photo/black-monitors-on-wooden-table-in-a-conference-room-6949382/) |
+| `business-advice.avif` | Бизнесийн зөвлөгөө | Werner Pfennig | [Black Monitors on Wooden Table in a Conference Room](https://www.pexels.com/photo/black-monitors-on-wooden-table-in-a-conference-room-6949382/) |
 | `ongoing-counsel.jpg` | Тогтмол зөвлөх үйлчилгээ | Aaron King | [Old Books in a Library](https://www.pexels.com/photo/old-books-in-a-library-18670323/) |
 | `practice-menu-advisory.jpg` | Нэг удаагийн хууль зүйн зөвлөгөө | RDNE Stock project | [Photo of Employment Contract](https://www.pexels.com/photo/photo-of-employment-contract-7841410/) |
 
@@ -13,11 +13,11 @@ License: [Pexels License](https://www.pexels.com/license/). Free personal and co
 
 Files were downloaded as compressed JPEGs from `images.pexels.com/photos/{photo-id}/pexels-photo-{photo-id}.jpeg`. The 2026-10-22 replacements were downloaded at 1600 pixels wide.
 
-The existing `trusted-counsel.jpg` photo for Гэрээ ба хэлцэл is unchanged. The service menu reuses the human-free `litigation.jpg`, `business-advice.jpg`, and `ongoing-counsel.jpg` photos listed above. This source list covers only the replacement photos above.
+The service menu reuses the human-free `litigation.jpg`, `business-advice.avif`, and `ongoing-counsel.jpg` photos listed above. This source list covers only the replacement photos above.
 
 ## Team avatars
 
-`team-avatar-jargalan.png`, `team-avatar-dulguun.png`, `team-avatar-byambadorj.png`, and `team-avatar-badamsuren.png` were generated with OpenAI image generation on 2026-10-21. They are illustrative avatars, not photographs or likenesses of Tsets Partners team members.
+`team-avatar-badamsuren.avif` was generated with OpenAI image generation on 2026-10-21. It is an illustrative avatar, not a photograph or likeness of a Tsets Partners team member.
 
 ## Client logos
 

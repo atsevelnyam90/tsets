@@ -8,8 +8,10 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
+import { flushSync } from "react-dom";
 import {
   defaultPublicLocale,
   isPublicLocale,
@@ -37,6 +39,11 @@ export function PublicI18nProvider({
   locale?: PublicLocale;
 }) {
   const [locale, setLocale] = useState<PublicLocale>(initialLocale);
+  const localeRef = useRef(locale);
+
+  useEffect(() => {
+    localeRef.current = locale;
+  }, [locale]);
 
   useEffect(() => {
     try {
@@ -85,12 +92,37 @@ export function PublicI18nProvider({
   }, [locale]);
 
   const selectLocale = useCallback((nextLocale: PublicLocale) => {
-    setLocale(nextLocale);
-    try {
-      localStorage.setItem(storageKey, nextLocale);
-    } catch {
-      // Language switching still works for the current visit without persistence.
+    if (nextLocale === localeRef.current) return;
+
+    const commitLocale = () => {
+      localeRef.current = nextLocale;
+      setLocale(nextLocale);
+      try {
+        localStorage.setItem(storageKey, nextLocale);
+      } catch {
+        // Language switching still works for the current visit without persistence.
+      }
+    };
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      typeof document.startViewTransition !== "function"
+    ) {
+      commitLocale();
+      return;
     }
+
+    const root = document.documentElement;
+    root.dataset.localeTransition = "active";
+    const transition = document.startViewTransition(() => {
+      flushSync(() => {
+        commitLocale();
+      });
+    });
+    const finishTransition = () => {
+      delete root.dataset.localeTransition;
+    };
+    transition.finished.then(finishTransition, finishTransition);
   }, []);
 
   const contextValue = useMemo(

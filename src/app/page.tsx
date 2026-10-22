@@ -16,12 +16,11 @@ import {
   TrustedLogos,
 } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
-import { teamMembers } from "@/lib/team-members";
 import styles from "./page.module.css";
 
 const galleryImages = [
   "/images/litigation.jpg",
-  "/images/business-advice.jpg",
+  "/images/business-advice.avif",
   "/images/ongoing-counsel.jpg",
 ] as const;
 
@@ -45,7 +44,7 @@ export default function HomePage() {
             loop
             muted
             playsInline
-            poster="/images/hero-modern-courtroom.jpg"
+            poster="/images/hero-modern-courtroom.avif"
             preload="auto"
           >
             <source src="/videos/tsets-hero.mp4" type="video/mp4" />
@@ -139,7 +138,7 @@ export default function HomePage() {
               alt={home.expertise.imageAlt}
               fill
               sizes="(max-width: 800px) 100vw, 45vw"
-              src="/images/legal-advisory-workspace.jpg"
+              src="/images/legal-advisory-workspace.avif"
             />
           </div>
           <div data-reveal="up" data-reveal-delay="100">
@@ -178,38 +177,6 @@ export default function HomePage() {
           <span>
             <Link href="/interview">{home.showcase.quoteMeta}</Link>
           </span>
-        </div>
-
-        <div className={`shell ${styles.leaders}`} data-template-only>
-          <div data-reveal="up">
-            <p className="eyebrow eyebrowLight">{home.leaders.eyebrow}</p>
-            <h2>{home.leaders.title}</h2>
-            <p>{home.leaders.text}</p>
-          </div>
-          <article data-reveal="up" data-reveal-delay="150">
-            <Image
-              alt={home.leaders.litigationAlt}
-              fill
-              sizes="300px"
-              src={teamMembers[0].image}
-            />
-            <div>
-              <strong>{home.leaders.litigationTitle}</strong>
-              <span>{home.leaders.litigationText}</span>
-            </div>
-          </article>
-          <article data-reveal="up" data-reveal-delay="250">
-            <Image
-              alt={home.leaders.advisoryAlt}
-              fill
-              sizes="300px"
-              src={teamMembers[1].image}
-            />
-            <div>
-              <strong>{home.leaders.advisoryTitle}</strong>
-              <span>{home.leaders.advisoryText}</span>
-            </div>
-          </article>
         </div>
       </section>
 

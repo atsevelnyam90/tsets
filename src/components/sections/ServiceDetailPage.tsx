@@ -14,6 +14,7 @@ import {
   House,
   IdCard,
   Landmark,
+  type LucideIcon,
   MapPinned,
   MessageSquareText,
   Pickaxe,
@@ -21,7 +22,6 @@ import {
   Scale,
   SearchCheck,
   ShieldCheck,
-  type LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
@@ -79,19 +79,9 @@ const serviceCardIcons = {
     [ShieldCheck],
   ],
   retained: [
-    [
-      MessageSquareText,
-      ClipboardCheck,
-      FilePenLine,
-      Scale,
-      Gavel,
-      SearchCheck,
-    ],
+    [MessageSquareText, ClipboardCheck, FilePenLine, Scale, Gavel, SearchCheck],
   ],
-} satisfies Record<
-  ParentServiceKey,
-  readonly (readonly LucideIcon[])[]
->;
+} satisfies Record<ParentServiceKey, readonly (readonly LucideIcon[])[]>;
 
 type ServiceDetailPageProps = {
   service: ServicePageKey;

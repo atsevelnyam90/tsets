@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { InterviewArticle } from "@/components/sections/InterviewArticle";
+import { LocalizedInterviewArticle } from "@/components/sections/LocalizedInterviewArticle";
 import {
   businessInterviews,
   getBusinessInterview,
@@ -24,5 +24,5 @@ export default async function BusinessInterviewPage({
   const article = getBusinessInterview(slug);
   if (!article) notFound();
 
-  return <InterviewArticle article={article} />;
+  return <LocalizedInterviewArticle article={article} />;
 }

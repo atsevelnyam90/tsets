@@ -16,7 +16,7 @@ export default function InterviewPage() {
     <InterviewArticle
       article={{
         ...localizedInterview,
-        image: "/images/tsets-lkhagvasuren-interview.jpg",
+        image: "/images/tsets-lkhagvasuren-interview.avif",
         sourceLabel: localizedInterview.source,
         sourceName: "Business.mn",
         sourceUrl: "https://business.mn/?p=47642",

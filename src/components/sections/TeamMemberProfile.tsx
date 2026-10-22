@@ -10,7 +10,7 @@ import { teamMembers } from "@/lib/team-members";
 import styles from "./TeamMemberProfile.module.css";
 
 export function TeamMemberProfile({ slug }: { slug: TeamMemberSlug }) {
-  const { common, team } = useSiteMessages();
+  const { team } = useSiteMessages();
   const member = teamMembers.find((item) => item.slug === slug);
   const profile = team.members[slug];
 
@@ -19,35 +19,52 @@ export function TeamMemberProfile({ slug }: { slug: TeamMemberSlug }) {
   return (
     <>
       <section className={styles.hero}>
-        <div className={`shell ${styles.heroGrid}`}>
-          <div className={styles.image}>
-            <Image
-              alt=""
-              fill
-              priority
-              sizes="(max-width: 850px) 100vw, 50vw"
-              src={member.image}
-            />
-          </div>
-          <div className={styles.copy}>
-            <Link className={styles.backLink} href="/team">
-              <span aria-hidden="true">←</span>
-              {team.members.backToTeam}
-            </Link>
-            <p className="eyebrow">{team.members.profileEyebrow}</p>
-            <h1>{profile.name}</h1>
-            <p className={styles.role}>{profile.role}</p>
-            <p className={styles.intro}>{team.members.intro}</p>
-            <dl className={styles.information}>
-              <div>
-                <dt>{team.members.firmLabel}</dt>
-                <dd>{common.company}</dd>
+        <div className="shell">
+          <Link className={styles.backLink} href="/about#team">
+            <span aria-hidden="true">←</span>
+            {team.members.backToTeam}
+          </Link>
+          <div className={styles.heroGrid}>
+            <div className={styles.image}>
+              {member.image ? (
+                <Image
+                  alt=""
+                  fill
+                  priority
+                  sizes="(max-width: 850px) 100vw, 50vw"
+                  src={member.image}
+                />
+              ) : (
+                <span aria-hidden="true" className={styles.placeholder}>
+                  {profile.name.charAt(0)}
+                </span>
+              )}
+            </div>
+            <div className={styles.copy}>
+              <div className={styles.identity}>
+                <p className={styles.role}>{profile.role}</p>
+                <h1>{profile.name}</h1>
               </div>
-              <div>
-                <dt>{team.members.practiceLabel}</dt>
-                <dd>{team.members.practiceValue}</dd>
+              <div className={styles.biographyContent}>
+                {profile.bio.map((block, index) => {
+                  const key = `${block.type}-${index}`;
+
+                  if (block.type === "heading") {
+                    return <h2 key={key}>{block.text}</h2>;
+                  }
+
+                  if (block.type === "bullet") {
+                    return (
+                      <p className={styles.bullet} key={key}>
+                        {block.text}
+                      </p>
+                    );
+                  }
+
+                  return <p key={key}>{block.text}</p>;
+                })}
               </div>
-            </dl>
+            </div>
           </div>
         </div>
       </section>

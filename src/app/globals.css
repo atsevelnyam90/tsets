@@ -154,6 +154,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[data-locale-transition="active"]::view-transition-old(root) {
+  z-index: 1;
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-locale-transition="active"]::view-transition-new(root) {
+  z-index: 2;
+  animation: locale-wipe-in 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  mix-blend-mode: normal;
+}
+
+@keyframes locale-wipe-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0);
+  }
+}
+
 button,
 input,
 select,

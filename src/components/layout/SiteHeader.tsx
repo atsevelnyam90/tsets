@@ -5,7 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
-import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import {
+  usePublicLocale,
+  useSiteMessages,
+} from "@/lib/i18n/PublicI18nProvider";
+import { localizeBusinessInterviews } from "@/lib/interview-localizations";
 import { businessInterviews } from "@/lib/interviews";
 import { siteContact } from "@/lib/site-contact";
 import { LanguageSelector } from "./LanguageSelector";
@@ -30,7 +34,7 @@ const practiceLinks = [
   },
   {
     href: "/practice-areas/arbitration",
-    image: "/images/business-advice.jpg",
+    image: "/images/business-advice.avif",
   },
 ] as const;
 
@@ -44,6 +48,7 @@ function ChevronIcon() {
 
 export function SiteHeader() {
   const messages = useSiteMessages();
+  const { locale } = usePublicLocale();
   const { header, interview } = messages;
   const pathname = usePathname().replace(/\/$/, "") || "/";
   const menuRef = useRef<HTMLDetailsElement>(null);
@@ -57,12 +62,12 @@ export function SiteHeader() {
   const interviewLinks = [
     {
       href: "/interview",
-      image: "/images/tsets-lkhagvasuren-interview.jpg",
+      image: "/images/tsets-lkhagvasuren-interview.avif",
       menuDate: "2025.06.10",
       sourceName: "Business.mn",
       title: interview.title,
     },
-    ...businessInterviews.map((item) => ({
+    ...localizeBusinessInterviews(businessInterviews, locale).map((item) => ({
       href: `/interview/${item.slug}`,
       image: item.image,
       menuDate: item.menuDate,
@@ -97,10 +102,10 @@ export function SiteHeader() {
         <Link className={styles.logo} href="/" aria-label={header.logoLabel}>
           <Image
             alt="Tsets Partners"
-            height={1254}
+            height={256}
             priority
             src="/images/tsets-logo-transparent.png"
-            width={1254}
+            width={256}
           />
         </Link>
 

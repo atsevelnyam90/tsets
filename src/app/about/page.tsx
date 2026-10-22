@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { TeamMemberCards } from "@/components/sections/TeamMemberCards";
 import { TrustedLogos } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
@@ -29,11 +30,11 @@ export default function AboutPage() {
         <div className={`shell ${styles.introGrid}`}>
           <div className={styles.introImage} data-reveal="up">
             <Image
-              alt={team.members["byambadorj-dorjsuren"].name}
+              alt={team.members["lkhagvasuren-ganbold"].name}
               fill
               priority
               sizes="(max-width: 850px) 100vw, 50vw"
-              src="/images/team-avatar-byambadorj.png"
+              src="/images/team-lkhagvasuren.avif"
             />
           </div>
           <div
@@ -52,6 +53,13 @@ export default function AboutPage() {
                 </div>
               ))}
             </dl>
+            <Link
+              className={styles.founderProfileLink}
+              href="/team/lkhagvasuren-ganbold"
+            >
+              {team.members.viewProfile}
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -61,7 +69,7 @@ export default function AboutPage() {
           <div className={styles.teamHeading}>
             <h2>{about.team.title}</h2>
           </div>
-          <TeamMemberCards />
+          <TeamMemberCards hiddenSlug="lkhagvasuren-ganbold" />
         </div>
       </section>
 

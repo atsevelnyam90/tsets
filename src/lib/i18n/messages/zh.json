@@ -139,17 +139,6 @@
       "quote": "法律服务如同战略工具，能够帮助您预见三步之后的风险。",
       "quoteMeta": "创始合伙人、律师 · 2025.06.10 · 阅读专访"
     },
-    "leaders": {
-      "eyebrow": "专业团队",
-      "title": "值得信赖的律师",
-      "text": "专注于争议解决及法律顾问服务的专业团队。",
-      "litigationAlt": "诉讼律师团队",
-      "litigationTitle": "诉讼律师团队",
-      "litigationText": "诉讼代理与法律援助",
-      "advisoryAlt": "法律顾问团队",
-      "advisoryTitle": "法律顾问团队",
-      "advisoryText": "商业及常年法律顾问服务"
-    },
     "contactImageAlt": "法律文件、法槌与正义天平"
   },
   "about": {
@@ -324,31 +313,161 @@
     "teamNote": "事务所简介称团队由12名律师组成，而2025年6月专访提及4名律师及6名律师助理。待确认当前团队名单后，将在此发布律师个人介绍。",
     "members": {
       "viewProfile": "查看简介",
-      "backToTeam": "返回团队",
-      "profileEyebrow": "专业团队",
-      "intro": "我们通过紧密的团队协作和严谨的研究，为每位客户制定务实的法律解决方案。",
-      "firmLabel": "律师事务所",
-      "practiceLabel": "服务领域",
-      "practiceValue": "诉讼代理 · 法律援助 · 法律顾问",
+      "backToTeam": "返回",
       "contactEyebrow": "与我们合作",
       "contactTitle": "联系我们",
       "contactText": "请通过电子邮件简要说明您的事项，我们将安排最合适的沟通方式。",
       "emailLabel": "发送邮件",
       "facebookLabel": "Facebook页面",
       "instagramLabel": "Instagram页面",
-      "jargalan-byambatsogt": {
-        "name": "Jargalan Byambatsogt",
-        "role": "高级律师"
+      "lkhagvasuren-ganbold": {
+        "name": "G. Lkhagvasuren",
+        "role": "创始人、执行董事、执业律师",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "甘博勒德·拉格瓦苏伦（Lkhagvasuren Ganbold）是 Tsets Partners 律师事务所的创始人兼执行董事。他是一位拥有 12 年执业经验的律师，擅长保险法和商业法领域。"
+          },
+          {
+            "type": "paragraph",
+            "text": "他拥有扎萨克法律学院（Ikh Zasag Law School）的法学硕士（LL.M.）学位以及财经大学（UFE）的工商管理硕士（MBA）学位。目前，他是蒙古国立大学法学院的法学博士研究生。他是蒙古律师协会和蒙古辩护士协会的会员。"
+          },
+          {
+            "type": "paragraph",
+            "text": "自 2025 年起，他一直担任蒙古国际仲裁中心仲裁员；2026 年，他被选任为蒙古国际与国家体育仲裁院仲裁员。"
+          }
+        ]
       },
-      "dulguun-erdenebulgan": {
-        "name": "Dulguun Erdenebulgan",
-        "role": "律师"
+      "bat-erdene-bayarsaikhan": {
+        "name": "B. Bat-Erdene",
+        "role": "联合创始人、执业律师",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "巴亚尔赛罕·巴特额尔德尼（Bat-Erdene Bayarsaikhan）是 Tsets Partners 律师事务所的联合创始人。他是一位拥有 12 年执业经验的律师，精通刑法、商业法和公司法。他拥有扎萨克法律学院的法学学士和法学硕士学位。他是蒙古律师协会和蒙古辩护士协会的会员。"
+          }
+        ]
       },
-      "byambadorj-dorjsuren": {
-        "name": "Byambadorj Dorjsuren",
-        "role": "律师"
+      "erdenebold-tsegmid": {
+        "name": "Ts. Erdenebold",
+        "role": "法律顾问",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "采格米德·额尔德尼博勒德（Erdenebold Tsegmid）毕业于苏联基辅国立大学（国际法学专业）和英国利兹大学（英语翻译专业）。他分别拥有俄罗斯科学院国家与法研究所以及美国乔治·华盛顿大学的法学博士学位。"
+          },
+          { "type": "heading", "text": "工作经历" },
+          {
+            "type": "paragraph",
+            "text": "他在公共部门、私营企业及国际组织中担任过法律顾问和高管职务，拥有极其丰富的专业经验："
+          },
+          {
+            "type": "bullet",
+            "text": "公共与国际领域：曾任人民大呼拉尔主席团秘书处专员、蒙古国议会（国家大呼拉尔）外交政策顾问、乌兰巴托市政府外事局局长、矿业与重工业部部长顾问等要职。此外，他还曾为世界银行、亚洲开发银行、欧洲复兴开发银行（EBRD）及联合国开发计划署（UNDP）主持涉及国际贸易、关贸总协定（GATT）和联合国国际贸易法委员会（UNCITRAL）的相关项目，目前仍担任 UNDP 的签约翻译。"
+          },
+          {
+            "type": "bullet",
+            "text": "法律与咨询领域：曾作为美国“Buxbaum & Choy”律师事务所代表，率先将国际咨询服务引入蒙古。他与外国律师共同创办了“New Grata JLPV”国际律师事务所并担任执行董事。他的代表性业绩包括：协助“Energy Resources”公司在香港交易所上市（IPO）、协助蒙古企业在美国纳斯达克（NASDAQ）上市，以及担任“Erdenes Tavan Tolgoi”公司电厂项目的国际法律顾问。近期，他曾任“New Ulaanbaatar International Airport”有限公司法律部经理。"
+          },
+          {
+            "type": "bullet",
+            "text": "教学与学术研究：曾任蒙古科技大学人文学院院长、泰国玛希敦大学客座教授，并在蒙古国立大学及城市大学担任教授，为培养新一代法律人才做出了杰出贡献。在此期间，他出版了 20 多本专著、教材并发表了多篇学术论文。"
+          },
+          { "type": "heading", "text": "荣誉与奖项" },
+          {
+            "type": "paragraph",
+            "text": "他曾荣获蒙古国国家最高荣誉之一“北极星勋章”（Altan Gadas）以及“教育优秀工作者”称号。"
+          },
+          {
+            "type": "paragraph",
+            "text": "他精通蒙古语、俄语和英语，并具备法语的基本应用能力。"
+          }
+        ]
       },
-      "badamsuren-urtnasan": { "name": "Badamsuren Urtnasan", "role": "律师" }
+      "myadagmaa-bat-erdene": {
+        "name": "B. Myadagmaa",
+        "role": "执业律师",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "巴特额尔德尼·米亚达格玛（Myadagmaa Bat-Erdene）是一位拥有 10 年执业经验的律师，擅长公司法、劳动法及法律咨询业务。在 Cets Partners 律师事务所，她主要负责公司法律咨询、企业合规文件起草以及代表客户处理公司间纠纷。她毕业于扎萨克法律学院法学专业，是蒙古律师协会和蒙古辩护士协会的会员律师。"
+          }
+        ]
+      },
+      "ariunsanaa-oyun-erdene": {
+        "name": "O. Ariunsanaa",
+        "role": "律师助理",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "奥云额尔德尼·阿里乌恩萨娜（Ariunsanaa Oyun-Erdene）毕业于扎萨克法律学院法学专业。"
+          },
+          {
+            "type": "paragraph",
+            "text": "她在律所中为执业律师及管理团队提供工作支持。其主要职责包括：根据授权委托书代表客户出席民事和行政法院诉讼、起草和审查各类公函、法律文件与合同，以及向蒙古国政府及地方行政机关提交申请、请求和申诉等。"
+          },
+          {
+            "type": "paragraph",
+            "text": "她精通蒙古语和英语，并具备韩语的基本应用能力。"
+          }
+        ]
+      },
+      "narangerel-amarsaikhan": {
+        "name": "A. Narangerel",
+        "role": "律师助理",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "阿玛尔赛罕·纳兰格日勒（Narangerel Amarsaikhan）拥有扎萨克法律学院的法学学士（LL.B.）学位。"
+          },
+          {
+            "type": "paragraph",
+            "text": "她在法律助理服务的所有领域为律所律师、管理团队及客户提供全面支持。其主要职责包括：协助律师在民事和行政纠纷案件中代表客户出庭，以及起草各类公函、合同和其他法律文件。"
+          }
+        ]
+      },
+      "dugarmaa-enkhbat": {
+        "name": "E. Dugarmaa",
+        "role": "律师助理",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "恩赫巴特·杜格尔玛（Dugarmaa Enkhbat）拥有扎萨克国际大学法学院的法学学士（LL.B.）学位，并在蒙古人力资源改革学院进修了人力资源与工商管理专业。"
+          },
+          {
+            "type": "paragraph",
+            "text": "她在法律助理服务的所有领域为律所律师、管理团队及客户提供全面支持。其主要职责包括：在民事和行政纠纷诉讼中协助律师出庭，起草各类公函和法律文件，以及处理向蒙古国政府及地方行政机关提交的请求和申诉事宜。"
+          }
+        ]
+      },
+      "bayarmaa-nyamlhagva": {
+        "name": "N. Bayarmaa",
+        "role": "律师助理",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "尼亚姆拉格瓦·巴亚尔玛（Bayarmaa Nyamlkhagva）拥有扎萨克法律学院的法学学士（LL.B.）学位。"
+          },
+          {
+            "type": "paragraph",
+            "text": "她在法律助理服务的所有领域为律所律师、管理团队及客户提供全面支持。其主要职责包括：协助律师在民事和行政纠纷案件中代表客户出庭，以及起草各类公函、合同和其他法律文件。"
+          }
+        ]
+      },
+      "khuslen-gantor": {
+        "name": "G. Khuslen",
+        "role": "律师助理",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "甘图勒嘎·胡斯楞（Khuslen Gantor）拥有扎萨克法律学院的法学学士（LL.B.）学位。"
+          },
+          {
+            "type": "paragraph",
+            "text": "他在法律助理服务的所有领域为律所律师、管理团队及客户提供全面支持。其主要职责包括：协助律师在民事和行政纠纷案件中代表客户出庭，以及起草各类公函、合同和其他法律文件。"
+          }
+        ]
+      }
     },
     "groups": [
       { "name": "诉讼律师团队", "role": "诉讼代理与法律援助" },

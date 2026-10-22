@@ -365,55 +365,6 @@
   color: var(--on-dark-muted);
   font-size: var(--type-caption);
 }
-.leaders {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr 1fr;
-  gap: 24px;
-  align-items: end;
-}
-.leaders > div:first-child {
-  align-self: start;
-}
-.leaders h2 {
-  margin: 0 0 25px;
-}
-.leaders > div p:last-child {
-  max-width: 230px;
-  color: var(--on-dark-muted);
-}
-.leaders article {
-  position: relative;
-  min-height: 470px;
-  overflow: hidden;
-  border-radius: 12px;
-}
-.leaders article img {
-  object-fit: cover;
-  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.leaders article:hover img {
-  transform: scale(1.04);
-}
-.leaders article::after {
-  position: absolute;
-  inset: 55% 0 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
-  content: "";
-}
-.leaders article div {
-  position: absolute;
-  right: 22px;
-  bottom: 20px;
-  left: 22px;
-  z-index: 1;
-  display: grid;
-}
-.leaders article span {
-  color: #c6d1d1;
-  font-size: var(--type-caption);
-}
-
 .homeContact {
   padding: 120px 0 90px;
   background: var(--paper);
@@ -491,12 +442,6 @@
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
-  .leaders {
-    grid-template-columns: 1fr 1fr;
-  }
-  .leaders > div:first-child {
-    grid-column: 1 / -1;
-  }
   .homeContact {
     padding-top: 100px;
   }
@@ -528,15 +473,8 @@
   .strengths {
     padding-top: 90px;
   }
-  .gallery,
-  .leaders {
+  .gallery {
     grid-template-columns: 1fr;
-  }
-  .leaders > div:first-child {
-    grid-column: auto;
-  }
-  .leaders article {
-    min-height: 450px;
   }
   .expertiseImage,
   .homeContactImage {
@@ -547,7 +485,7 @@
 @media (prefers-reduced-motion: reduce) {
   .heroMedia {
     background:
-      url("/images/hero-modern-courtroom.jpg") center / cover no-repeat;
+      url("/images/hero-modern-courtroom.avif") center / cover no-repeat;
   }
   .heroMedia video {
     display: none;
