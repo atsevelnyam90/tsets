@@ -257,6 +257,7 @@
 
 .expertise {
   padding: 90px 0 150px;
+  background: var(--paper);
 }
 .expertiseGrid {
   display: grid;
@@ -415,6 +416,7 @@
 
 .homeContact {
   padding: 120px 0 90px;
+  background: var(--paper);
 }
 .homeContactGrid {
   display: grid;

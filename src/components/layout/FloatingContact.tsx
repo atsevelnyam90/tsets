@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./FloatingContact.module.css";
 
 export function FloatingContact() {
@@ -10,7 +11,7 @@ export function FloatingContact() {
     <a
       aria-label={floatingContact.label}
       className={styles.chat}
-      href="mailto:Lkhagvalawyer@gmail.com"
+      href={`mailto:${siteContact.email}`}
     >
       <i>
         <MessageCircle aria-hidden="true" size={22} strokeWidth={1.8} />

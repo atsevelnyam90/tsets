@@ -35,7 +35,9 @@
     "practiceLinks": [
       "诉讼阶段的辩护、代理及法律援助",
       "法律顾问服务",
-      "常年法律顾问服务"
+      "常年法律顾问服务",
+      "法院判决执行程序",
+      "仲裁及其他机构程序"
     ],
     "advantages": "我们的优势"
   },
@@ -121,7 +123,7 @@
       }
     ],
     "expertise": {
-      "imageAlt": "律师为客户提供咨询",
+      "imageAlt": "摆放法律文件和正义天平的专业法律工作空间",
       "eyebrow": "经验与责任",
       "title": "以专业法律意见管理风险",
       "text": "Tsets Partners根据个人及机构客户的实际需求，提供诉讼代理、单次法律顾问和常年法律顾问服务。"
@@ -148,7 +150,7 @@
       "advisoryTitle": "法律顾问团队",
       "advisoryText": "商业及常年法律顾问服务"
     },
-    "contactImageAlt": "Tsets Partners法律咨询"
+    "contactImageAlt": "法律文件、法槌与正义天平"
   },
   "about": {
     "hero": {
@@ -333,6 +335,7 @@
       "contactText": "请通过电子邮件简要说明您的事项，我们将安排最合适的沟通方式。",
       "emailLabel": "发送邮件",
       "facebookLabel": "Facebook页面",
+      "instagramLabel": "Instagram页面",
       "jargalan-byambatsogt": {
         "name": "Jargalan Byambatsogt",
         "role": "高级律师"
@@ -373,6 +376,8 @@
     "emailNote": "发送咨询或相关资料",
     "facebookLabel": "Facebook",
     "facebookNote": "访问我们的主页",
+    "instagramLabel": "Instagram",
+    "instagramNote": "访问我们的主页",
     "officeLabel": "地址",
     "officeValue": "Old City Tower 6-601室",
     "officeNote": "巴彦珠尔赫区第7分区和平大道",

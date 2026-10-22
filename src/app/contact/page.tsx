@@ -1,14 +1,21 @@
 "use client";
 
-import { ArrowRight, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Facebook,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import { LibraryContact } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./contact.module.css";
 
 export default function ContactPage() {
   const { contact } = useSiteMessages();
-  const email = "Lkhagvalawyer@gmail.com";
-  const phone = "75997599";
+  const { email, phone, social } = siteContact;
   return (
     <>
       <section className={styles.title}>
@@ -18,7 +25,7 @@ export default function ContactPage() {
             <p>{contact.intro}</p>
           </div>
           <div className={styles.contactGrid}>
-            <a className={styles.contactItem} href="tel:+97675997599">
+            <a className={styles.contactItem} href={phone.href}>
               <span className={styles.contactIcon}>
                 <Phone aria-hidden="true" size={20} strokeWidth={1.7} />
               </span>
@@ -26,7 +33,7 @@ export default function ContactPage() {
                 <span className={styles.contactLabel}>
                   {contact.phoneLabel}
                 </span>
-                <strong>{phone}</strong>
+                <strong>{phone.display}</strong>
                 <span>{contact.phoneNote}</span>
               </span>
             </a>
@@ -44,7 +51,7 @@ export default function ContactPage() {
             </a>
             <a
               className={styles.contactItem}
-              href="https://www.facebook.com/LkhagvaLawyer"
+              href={social.facebook.href}
               rel="noreferrer"
               target="_blank"
             >
@@ -55,8 +62,25 @@ export default function ContactPage() {
                 <span className={styles.contactLabel}>
                   {contact.facebookLabel}
                 </span>
-                <strong>@LkhagvaLawyer</strong>
+                <strong>{social.facebook.display}</strong>
                 <span>{contact.facebookNote}</span>
+              </span>
+            </a>
+            <a
+              className={styles.contactItem}
+              href={social.instagram.href}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span className={styles.contactIcon}>
+                <Instagram aria-hidden="true" size={20} strokeWidth={1.7} />
+              </span>
+              <span className={styles.contactCopy}>
+                <span className={styles.contactLabel}>
+                  {contact.instagramLabel}
+                </span>
+                <strong>{social.instagram.display}</strong>
+                <span>{contact.instagramNote}</span>
               </span>
             </a>
             <div className={styles.contactItem}>

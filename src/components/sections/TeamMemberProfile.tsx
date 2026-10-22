@@ -1,9 +1,10 @@
 "use client";
 
-import { Facebook, Mail } from "lucide-react";
+import { Facebook, Instagram, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import { siteContact } from "@/lib/site-contact";
 import type { TeamMemberSlug } from "@/lib/team-members";
 import { teamMembers } from "@/lib/team-members";
 import styles from "./TeamMemberProfile.module.css";
@@ -60,18 +61,27 @@ export function TeamMemberProfile({ slug }: { slug: TeamMemberSlug }) {
           <div>
             <p>{team.members.contactText}</p>
             <div className={styles.contactLinks}>
-              <a href="mailto:Lkhagvalawyer@gmail.com">
+              <a href={`mailto:${siteContact.email}`}>
                 <Mail aria-hidden="true" size={18} strokeWidth={1.8} />
                 {team.members.emailLabel}
               </a>
               <a
                 aria-label={team.members.facebookLabel}
-                href="https://www.facebook.com/LkhagvaLawyer"
+                href={siteContact.social.facebook.href}
                 rel="noreferrer"
                 target="_blank"
               >
                 <Facebook aria-hidden="true" size={18} />
                 Facebook
+              </a>
+              <a
+                aria-label={team.members.instagramLabel}
+                href={siteContact.social.instagram.href}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <Instagram aria-hidden="true" size={18} />
+                Instagram
               </a>
             </div>
           </div>

@@ -35,7 +35,9 @@
     "practiceLinks": [
       "Legal Representation and Assistance in Judicial Proceedings",
       "Legal Advisory Services",
-      "Retained Legal Advisory Services"
+      "Retained Legal Advisory Services",
+      "Enforcement Proceedings",
+      "Arbitration and Other Institutions"
     ],
     "advantages": "Our Advantages"
   },
@@ -131,7 +133,7 @@
       }
     ],
     "expertise": {
-      "imageAlt": "Attorney advising a client",
+      "imageAlt": "Professional legal workspace with documents and scales of justice",
       "eyebrow": "Experience and Responsibility",
       "title": "Managing risk through professional legal advice",
       "text": "Tsets Partners provides litigation representation, one-time legal advisory, and retained counsel services tailored to the needs of individuals and organizations."
@@ -158,7 +160,7 @@
       "advisoryTitle": "Legal Advisory Team",
       "advisoryText": "Business and retained legal counsel"
     },
-    "contactImageAlt": "Legal consultation at Tsets Partners"
+    "contactImageAlt": "Legal documents with a judge's gavel and scales of justice"
   },
   "about": {
     "hero": {
@@ -350,6 +352,7 @@
       "contactText": "Send us a brief outline of your matter by email, and we will arrange the most suitable way to connect.",
       "emailLabel": "Email Us",
       "facebookLabel": "Facebook page",
+      "instagramLabel": "Instagram page",
       "jargalan-byambatsogt": {
         "name": "Jargalan Byambatsogt",
         "role": "Senior Associate"
@@ -414,6 +417,8 @@
     "emailNote": "Send an inquiry or details",
     "facebookLabel": "Facebook",
     "facebookNote": "Visit our page",
+    "instagramLabel": "Instagram",
+    "instagramNote": "Visit our page",
     "officeLabel": "Address",
     "officeValue": "Office 6-601, Old City Tower",
     "officeNote": "Peace Avenue, 7th Khoroo, Bayanzürkh District",

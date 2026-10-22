@@ -47,6 +47,7 @@
   font-size: var(--type-nav);
   font-weight: 600;
   line-height: 1.7;
+  text-transform: uppercase;
   white-space: nowrap;
   transition: color 180ms ease;
 }
@@ -211,8 +212,8 @@
 
 .practiceCards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .practiceCards > a {
@@ -339,35 +340,10 @@
   line-height: 1.45;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.7vw;
-  color: var(--nav-ink);
-}
-
 .viewTools {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.phone {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: var(--type-body);
-  font-weight: 500;
-  line-height: 22px;
-  white-space: nowrap;
-}
-
-.phone svg {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
-  fill: currentColor;
 }
 
 .mobileMenu {
@@ -429,10 +405,11 @@
 .mobilePanel nav > a,
 .mobileServicesButton {
   padding: 13px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-family: var(--font-display);
-  font-size: var(--type-menu-primary);
+  font-size: clamp(1.125rem, 3.2vw, 1.5rem);
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .mobileServicesButton {
@@ -487,14 +464,14 @@
   min-height: 0;
   flex-direction: column;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobilePanel nav .mobileServicesList a {
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
   color: #d8e2e2;
-  font-size: var(--type-menu-secondary);
+  font-size: clamp(0.9375rem, 2.5vw, 1.125rem);
   line-height: 1.35;
 }
 
@@ -514,8 +491,7 @@
     min-height: 76px;
     padding: 10px 30px;
   }
-  .desktopNav,
-  .actions {
+  .desktopNav {
     display: none;
   }
   .mobileMenu {
@@ -527,12 +503,6 @@
   }
   .mobileMenu[open] summary {
     color: #fff;
-  }
-}
-
-@media (min-width: 1281px) and (max-width: 1550px) {
-  .phone {
-    display: none;
   }
 }
 

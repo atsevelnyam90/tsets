@@ -1,9 +1,10 @@
 "use client";
 
-import { Facebook, Mail } from "lucide-react";
+import { Facebook, Instagram, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./SiteFooter.module.css";
 
 export function SiteFooter() {
@@ -26,9 +27,9 @@ export function SiteFooter() {
         <div>
           <h3 className={styles.footerTitle}>{footer.contactTitle}</h3>
           <strong className={styles.legalName}>{footer.legalName}</strong>
-          <a href="mailto:Lkhagvalawyer@gmail.com">Lkhagvalawyer@gmail.com</a>
+          <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
           <address>{footer.address}</address>
-          <a href="tel:+97675997599">{footer.phone}</a>
+          <a href={siteContact.phone.href}>{footer.phone}</a>
         </div>
 
         <div>
@@ -49,16 +50,24 @@ export function SiteFooter() {
           <h3 className={styles.footerTitle}>{footer.socialTitle}</h3>
           <div className={styles.socials}>
             <a
-              aria-label="Facebook"
-              href="https://www.facebook.com/LkhagvaLawyer"
+              aria-label={siteContact.social.facebook.label}
+              href={siteContact.social.facebook.href}
               rel="noreferrer"
               target="_blank"
             >
               <Facebook aria-hidden="true" size={15} />
             </a>
             <a
+              aria-label={siteContact.social.instagram.label}
+              href={siteContact.social.instagram.href}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Instagram aria-hidden="true" size={15} />
+            </a>
+            <a
               aria-label={footer.emailLabel}
-              href="mailto:Lkhagvalawyer@gmail.com"
+              href={`mailto:${siteContact.email}`}
             >
               <Mail aria-hidden="true" size={15} />
             </a>

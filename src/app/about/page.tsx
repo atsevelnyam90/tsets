@@ -29,11 +29,11 @@ export default function AboutPage() {
         <div className={`shell ${styles.introGrid}`}>
           <div className={styles.introImage} data-reveal="up">
             <Image
-              alt={common.founder}
+              alt={team.members["byambadorj-dorjsuren"].name}
               fill
               priority
               sizes="(max-width: 850px) 100vw, 50vw"
-              src="/images/client-henry.jpg"
+              src="/images/team-avatar-byambadorj.png"
             />
           </div>
           <div

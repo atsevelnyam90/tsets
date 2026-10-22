@@ -16,6 +16,7 @@ import {
   TrustedLogos,
 } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import { teamMembers } from "@/lib/team-members";
 import styles from "./page.module.css";
 
 const galleryImages = [
@@ -138,7 +139,7 @@ export default function HomePage() {
               alt={home.expertise.imageAlt}
               fill
               sizes="(max-width: 800px) 100vw, 45vw"
-              src="/images/law-firm-consultation.jpg"
+              src="/images/legal-advisory-workspace.jpg"
             />
           </div>
           <div data-reveal="up" data-reveal-delay="100">
@@ -190,7 +191,7 @@ export default function HomePage() {
               alt={home.leaders.litigationAlt}
               fill
               sizes="300px"
-              src="/images/elizabeth-carter.jpg"
+              src={teamMembers[0].image}
             />
             <div>
               <strong>{home.leaders.litigationTitle}</strong>
@@ -202,7 +203,7 @@ export default function HomePage() {
               alt={home.leaders.advisoryAlt}
               fill
               sizes="300px"
-              src="/images/sophia-hartman.jpg"
+              src={teamMembers[1].image}
             />
             <div>
               <strong>{home.leaders.advisoryTitle}</strong>
@@ -219,7 +220,7 @@ export default function HomePage() {
               alt={home.contactImageAlt}
               fill
               sizes="(max-width: 800px) 100vw, 45vw"
-              src="/images/contact-attorney.jpg"
+              src="/images/expert-guidance.jpg"
             />
           </div>
           <div

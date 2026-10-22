@@ -2,6 +2,7 @@
 
 import type { FormEvent } from "react";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
+import { siteContact } from "@/lib/site-contact";
 import styles from "./ContactForm.module.css";
 
 export function ContactForm() {
@@ -23,7 +24,7 @@ export function ContactForm() {
       message,
     ].join("\n");
 
-    window.location.href = `mailto:Lkhagvalawyer@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:${siteContact.email}?subject=${encodeURIComponent(
       topic,
     )}&body=${encodeURIComponent(body)}`;
   };
