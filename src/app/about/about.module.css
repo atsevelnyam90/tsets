@@ -51,68 +51,17 @@
   font-size: var(--type-page-title);
   line-height: 1.15;
 }
-.introCopy > p {
+.founderBio {
   max-width: 610px;
-  color: var(--ink);
-  line-height: 1.75;
-}
-.introCopy > p:not(:global(.eyebrow)) {
+  display: grid;
+  gap: 14px;
   padding-left: 20px;
   border-left: 2px solid var(--gold);
 }
-.founderFacts {
-  margin: 32px 0 0;
-  border-top: 1px solid var(--line);
-}
-.founderFacts > div {
-  position: relative;
-  display: grid;
-  grid-template-columns: 125px 1fr;
-  gap: 24px;
-  padding: 17px 0 17px 22px;
-  border-bottom: 1px solid var(--line);
-}
-.founderFacts > div::before {
-  position: absolute;
-  top: 25px;
-  left: 1px;
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  content: "";
-  transform: rotate(45deg);
-}
-.founderFacts dt {
-  color: var(--gold);
-  font-family: var(--font-display);
-  font-size: var(--type-body-lg);
-}
-.founderFacts dd {
+.founderBio p {
   margin: 0;
-  line-height: 1.6;
-}
-
-.founderProfileLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 26px;
-  color: var(--gold);
-  font-size: var(--type-label);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.founderProfileLink span {
-  font-size: var(--type-symbol-lg);
-  font-weight: 400;
-  line-height: 0.6;
-  transition: transform 180ms ease;
-}
-
-.founderProfileLink:hover span,
-.founderProfileLink:focus-visible span {
-  transform: translateX(4px);
+  color: var(--ink);
+  line-height: 1.75;
 }
 
 .team {
@@ -281,10 +230,6 @@
 @media (max-width: 520px) {
   .intro {
     padding-bottom: 78px;
-  }
-  .founderFacts > div {
-    grid-template-columns: 1fr;
-    gap: 5px;
   }
   .ribbons {
     min-height: 350px;

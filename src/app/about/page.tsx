@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { TeamMemberCards } from "@/components/sections/TeamMemberCards";
 import { TrustedLogos } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
@@ -23,6 +22,7 @@ function RibbonTrack({ text }: { text: string }) {
 
 export default function AboutPage() {
   const { about, common, team } = useSiteMessages();
+  const founder = team.members["lkhagvasuren-ganbold"];
 
   return (
     <>
@@ -44,22 +44,13 @@ export default function AboutPage() {
           >
             <p className="eyebrow">{common.founderRole}</p>
             <h1>{common.founder}</h1>
-            <p>{team.founder.bio}</p>
-            <dl className={styles.founderFacts}>
-              {team.founder.facts.map((fact) => (
-                <div key={fact.term}>
-                  <dt>{fact.term}</dt>
-                  <dd>{fact.text}</dd>
-                </div>
-              ))}
-            </dl>
-            <Link
-              className={styles.founderProfileLink}
-              href="/team/lkhagvasuren-ganbold"
-            >
-              {team.members.viewProfile}
-              <span aria-hidden="true">→</span>
-            </Link>
+            <div className={styles.founderBio}>
+              {founder.bio
+                .filter((block) => block.type === "paragraph")
+                .map((block) => (
+                  <p key={block.text}>{block.text}</p>
+                ))}
+            </div>
           </div>
         </div>
       </section>
