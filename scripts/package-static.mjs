@@ -19,13 +19,14 @@ const archive = path.join(artifacts, "tsets-cpanel-static.zip");
 try {
   // Build a fresh archive so removed routes cannot survive from an older ZIP.
   // Running inside out/ puts index.html directly at the archive root.
-  execFileSync("zip", ["-q", "-r", path.join(temporary, "site.zip"), "."], {
+  // The server's .htaccess contains cPanel-managed directives and must survive extraction.
+  execFileSync("zip", ["-q", "-r", path.join(temporary, "site.zip"), ".", "-x", ".htaccess"], {
     cwd: output,
     stdio: "inherit",
   });
   renameSync(path.join(temporary, "site.zip"), archive);
   console.log(`Static deployment archive: ${archive}`);
-  console.log("Upload the contents of out/ or extract this archive into public_html.");
+  console.log("The archive excludes .htaccess; preserve the server-managed copy.");
   console.log("No files have been uploaded to the hosting server.");
 } finally {
   rmSync(temporary, { recursive: true, force: true });
