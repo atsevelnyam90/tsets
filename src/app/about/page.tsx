@@ -9,7 +9,7 @@ import {
   Target,
   UsersRound,
 } from "lucide-react";
-import { type PointerEvent as ReactPointerEvent, useState } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 import { TeamMemberCards } from "@/components/sections/TeamMemberCards";
 import { TrustedLogos } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
@@ -19,17 +19,6 @@ const identityIcons = [Eye, Compass] as const;
 const principleIcons = [UsersRound, Scale, Target, GraduationCap] as const;
 const magneticStrength = 0.06;
 const magneticMaxOffset = 12;
-const identityVariantValues = [
-  "current",
-  "editorial",
-  "framed",
-  "timeline",
-  "gradient",
-  "outline",
-  "ambition",
-] as const;
-
-type IdentityVariant = (typeof identityVariantValues)[number];
 
 function moveMagneticCard(event: ReactPointerEvent<HTMLElement>) {
   if (
@@ -77,8 +66,6 @@ const magneticCardEvents = {
 
 export default function AboutPage() {
   const { about } = useSiteMessages();
-  const [identityVariant, setIdentityVariant] =
-    useState<IdentityVariant>("current");
   const identityStatements = [
     {
       text: about.identity.visionText,
@@ -100,51 +87,18 @@ export default function AboutPage() {
       >
         <div
           className={styles.identityShowcase}
-          data-identity-variant={identityVariant}
+          data-identity-variant="ambition"
         >
-          <div className={styles.identityVariantPicker}>
-            <label htmlFor="identity-variant">
-              {about.identity.showcasePicker}
-            </label>
-            <select
-              id="identity-variant"
-              onChange={(event) =>
-                setIdentityVariant(event.target.value as IdentityVariant)
-              }
-              value={identityVariant}
-            >
-              {identityVariantValues.map((variant, index) => (
-                <option key={variant} value={variant}>
-                  {about.identity.showcaseOptions[index]}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {identityVariant !== "current" ? (
-            <header className={styles.identityHeading}>
-              {identityVariant === "ambition" ? (
-                <h1 id="identity-title">{about.identity.ambitionTitle}</h1>
-              ) : (
-                <h1 id="identity-title">
-                  {about.identity.showcaseTitle}{" "}
-                  <em>{about.identity.showcaseEmphasis}</em>{" "}
-                  {about.identity.showcaseEnding}
-                </h1>
-              )}
-            </header>
-          ) : null}
+          <header className={styles.identityHeading}>
+            <h1 id="identity-title">{about.identity.ambitionTitle}</h1>
+          </header>
 
           <div className={styles.identityGrid}>
             {identityStatements.map((item, index) => {
               const Icon = identityIcons[index];
 
               return (
-                <article
-                  className={styles.identityStatement}
-                  key={item.title}
-                  {...magneticCardEvents}
-                >
+                <article className={styles.identityStatement} key={item.title}>
                   <div className={styles.identityMeta} aria-hidden="true">
                     <span className={styles.identityIcon}>
                       <Icon />
@@ -159,15 +113,9 @@ export default function AboutPage() {
                     data-reveal-delay={index * 140}
                   >
                     <div className={styles.identityLabel}>
-                      {identityVariant === "current" && index === 0 ? (
-                        <h1 id="identity-title">
-                          <em>{item.title}</em>
-                        </h1>
-                      ) : (
-                        <h2>
-                          <em>{item.title}</em>
-                        </h2>
-                      )}
+                      <h2>
+                        <em>{item.title}</em>
+                      </h2>
                     </div>
                     <p>{item.text}</p>
                   </div>
@@ -176,7 +124,6 @@ export default function AboutPage() {
             })}
             <article
               className={`${styles.identityStatement} ${styles.identityValues}`}
-              {...magneticCardEvents}
             >
               <div className={styles.identityMeta} aria-hidden="true">
                 <span className={styles.identityIcon}>
