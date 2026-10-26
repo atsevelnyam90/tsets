@@ -1260,6 +1260,12 @@
     padding: 96px 22px 58px;
   }
 
+  .identityShowcase[data-identity-variant="ambition"] {
+    background:
+      linear-gradient(180deg, rgba(12, 5, 7, 0.5), rgba(12, 5, 7, 0.74)),
+      url("/images/about-legal-background-mobile.jpg") center / cover no-repeat;
+  }
+
   .identityVariantPicker {
     top: 14px;
     right: 14px;
@@ -1396,14 +1402,6 @@
 
   .identityValues .valuesManifesto {
     max-width: 560px;
-  }
-
-  .identityShowcase[data-identity-variant="ambition"] .identityGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .identityShowcase[data-identity-variant="ambition"] .identityValues {
-    grid-column: auto;
   }
 }
 
