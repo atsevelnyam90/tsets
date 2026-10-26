@@ -46,7 +46,7 @@
     "demos": ["Legal Representation", "Legal Advisory", "Retained Counsel"],
     "practiceLinks": [
       "Legal Representation and Assistance in Judicial Proceedings",
-      "Legal Advisory Services",
+      "One-Time Legal Advisory Services",
       "Retained Legal Advisory Services",
       "Enforcement Proceedings",
       "Arbitration and Other Institutions",
@@ -147,7 +147,7 @@
       "text": "We anticipate the risks of day-to-day business and the uncertainties of major transactions, and ensure that solutions to potential disputes are clearly addressed in contracts.",
       "gallery": [
         "Legal Representation and Assistance in Judicial Proceedings",
-        "Legal Advisory Services",
+        "One-Time Legal Advisory Services",
         "Retained Legal Advisory Services"
       ],
       "quote": "Legal services are a strategic instrument for anticipating risks and navigating challenges several moves ahead, just as in chess.",
@@ -168,6 +168,20 @@
         "Client satisfaction",
         "Professional service"
       ],
+      "showcasePicker": "About Us design",
+      "showcaseOptions": [
+        "Current design",
+        "Design 01 — Cards",
+        "Design 02 — Framed",
+        "Design 03 — Timeline",
+        "Design 04 — Gradient",
+        "Design 05 — Outline",
+        "Design 06 — Our ambition"
+      ],
+      "showcaseTitle": "Building legal services",
+      "showcaseEmphasis": "on trust",
+      "showcaseEnding": "",
+      "ambitionTitle": "Our ambition",
       "principlesTitle": "Principles",
       "principles": [
         {
@@ -254,7 +268,7 @@
         "text": "Representation and advocacy in civil, administrative, and criminal matters, enforcement proceedings, arbitration, and other institutions."
       },
       {
-        "title": "Legal Advisory Services",
+        "title": "One-Time Legal Advisory Services",
         "text": "Comprehensive advice, documentation, and representation for a specific matter, assignment, or transaction."
       },
       {

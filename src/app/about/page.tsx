@@ -1,15 +1,35 @@
 "use client";
 
-import { GraduationCap, Scale, Target, UsersRound } from "lucide-react";
-import type { PointerEvent as ReactPointerEvent } from "react";
+import {
+  Compass,
+  Eye,
+  Gem,
+  GraduationCap,
+  Scale,
+  Target,
+  UsersRound,
+} from "lucide-react";
+import { type PointerEvent as ReactPointerEvent, useState } from "react";
 import { TeamMemberCards } from "@/components/sections/TeamMemberCards";
 import { TrustedLogos } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 import styles from "./about.module.css";
 
+const identityIcons = [Eye, Compass] as const;
+const principleIcons = [UsersRound, Scale, Target, GraduationCap] as const;
 const magneticStrength = 0.06;
 const magneticMaxOffset = 12;
-const principleIcons = [UsersRound, Scale, Target, GraduationCap] as const;
+const identityVariantValues = [
+  "current",
+  "editorial",
+  "framed",
+  "timeline",
+  "gradient",
+  "outline",
+  "ambition",
+] as const;
+
+type IdentityVariant = (typeof identityVariantValues)[number];
 
 function moveMagneticCard(event: ReactPointerEvent<HTMLElement>) {
   if (
@@ -57,6 +77,8 @@ const magneticCardEvents = {
 
 export default function AboutPage() {
   const { about } = useSiteMessages();
+  const [identityVariant, setIdentityVariant] =
+    useState<IdentityVariant>("current");
   const identityStatements = [
     {
       text: about.identity.visionText,
@@ -76,54 +98,115 @@ export default function AboutPage() {
         data-motion-scope
         id="services"
       >
-        <div className={`shell ${styles.identityGrid}`}>
-          {identityStatements.map((item, index) => (
+        <div
+          className={styles.identityShowcase}
+          data-identity-variant={identityVariant}
+        >
+          <div className={styles.identityVariantPicker}>
+            <label htmlFor="identity-variant">
+              {about.identity.showcasePicker}
+            </label>
+            <select
+              id="identity-variant"
+              onChange={(event) =>
+                setIdentityVariant(event.target.value as IdentityVariant)
+              }
+              value={identityVariant}
+            >
+              {identityVariantValues.map((variant, index) => (
+                <option key={variant} value={variant}>
+                  {about.identity.showcaseOptions[index]}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {identityVariant !== "current" ? (
+            <header className={styles.identityHeading}>
+              {identityVariant === "ambition" ? (
+                <h1 id="identity-title">{about.identity.ambitionTitle}</h1>
+              ) : (
+                <h1 id="identity-title">
+                  {about.identity.showcaseTitle}{" "}
+                  <em>{about.identity.showcaseEmphasis}</em>{" "}
+                  {about.identity.showcaseEnding}
+                </h1>
+              )}
+            </header>
+          ) : null}
+
+          <div className={styles.identityGrid}>
+            {identityStatements.map((item, index) => {
+              const Icon = identityIcons[index];
+
+              return (
+                <article
+                  className={styles.identityStatement}
+                  key={item.title}
+                  {...magneticCardEvents}
+                >
+                  <div className={styles.identityMeta} aria-hidden="true">
+                    <span className={styles.identityIcon}>
+                      <Icon />
+                    </span>
+                    <span className={styles.identityNumber}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div
+                    className={styles.identityRow}
+                    data-reveal="fade"
+                    data-reveal-delay={index * 140}
+                  >
+                    <div className={styles.identityLabel}>
+                      {identityVariant === "current" && index === 0 ? (
+                        <h1 id="identity-title">
+                          <em>{item.title}</em>
+                        </h1>
+                      ) : (
+                        <h2>
+                          <em>{item.title}</em>
+                        </h2>
+                      )}
+                    </div>
+                    <p>{item.text}</p>
+                  </div>
+                </article>
+              );
+            })}
             <article
-              className={styles.identityStatement}
-              key={item.title}
+              className={`${styles.identityStatement} ${styles.identityValues}`}
               {...magneticCardEvents}
             >
+              <div className={styles.identityMeta} aria-hidden="true">
+                <span className={styles.identityIcon}>
+                  <Gem />
+                </span>
+                <span className={styles.identityNumber}>03</span>
+              </div>
               <div
                 className={styles.identityRow}
                 data-reveal="fade"
-                data-reveal-delay={index * 140}
+                data-reveal-delay={280}
               >
                 <div className={styles.identityLabel}>
-                  {index === 0 ? (
-                    <h1 id="identity-title">
-                      <em>{item.title}</em>
-                    </h1>
-                  ) : (
-                    <h2>
-                      <em>{item.title}</em>
-                    </h2>
-                  )}
+                  <h2>
+                    <em>{about.identity.valuesTitle}</em>
+                  </h2>
                 </div>
-                <p>{item.text}</p>
+                <ol className={styles.valuesManifesto}>
+                  {about.identity.values.map((value, index) => (
+                    <li key={value}>
+                      <span aria-hidden="true">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <p>{value}</p>
+                    </li>
+                  ))}
+                </ol>
               </div>
             </article>
-          ))}
-          <article
-            className={`${styles.identityStatement} ${styles.identityValues}`}
-            {...magneticCardEvents}
-          >
-            <div
-              className={styles.identityRow}
-              data-reveal="fade"
-              data-reveal-delay={280}
-            >
-              <div className={styles.identityLabel}>
-                <h2>
-                  <em>{about.identity.valuesTitle}</em>
-                </h2>
-              </div>
-              <ul className={styles.valuesList}>
-                {about.identity.values.map((value) => (
-                  <li key={value}>{value}</li>
-                ))}
-              </ul>
-            </div>
-          </article>
+          </div>
         </div>
         <section className={styles.principles} id="principles">
           <div className={`shell ${styles.principlesInner}`}>

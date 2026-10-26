@@ -9,9 +9,9 @@ import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 import styles from "./page.module.css";
 
 const galleryImages = [
-  "/images/litigation.jpg",
-  "/images/business-advice.avif",
-  "/images/ongoing-counsel.jpg",
+  "/images/home-service-litigation.jpg",
+  "/images/home-service-one-time-advisory.jpg",
+  "/images/home-service-retained-advisory.jpg",
 ] as const;
 
 const serviceRoutes = [

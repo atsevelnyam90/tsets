@@ -30,6 +30,10 @@ Downloaded from Wikimedia Commons and Pexels on 2026-10-23. These are real photo
 
 `legal-advisory-workspace.avif` is a human-free editorial image of a Mongolian legal workspace, generated with OpenAI image generation on 2026-10-23 and exported as an optimized AVIF. The final version removes the inaccurate emblem from the initial draft.
 
+## About page imagery
+
+`about-identity-office.jpg` is a wide, human-free premium legal-office interior created for the About Us identity section with OpenAI image generation on 2026-10-26. It uses the firm's burgundy, restrained gold, and ivory palette with an Ulaanbaatar skyline and mountain backdrop, and was exported as an optimized JPEG.
+
 ## Team portraits
 
 `team-namuungoo.jpg` was extracted from the client-provided team CV PDF on 2026-10-23.
