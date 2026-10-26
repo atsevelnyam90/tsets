@@ -200,6 +200,44 @@
   max-width: 520px;
   font-size: clamp(1.05rem, 1.22vw, 1.3rem);
 }
+.identityValues {
+  grid-column: 1 / -1;
+  min-height: 210px;
+}
+.identityValues .identityRow {
+  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 76px);
+}
+.valuesList {
+  display: grid;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(30px, 4vw, 60px);
+  list-style: none;
+}
+.valuesList li {
+  position: relative;
+  padding: 15px 12px 15px 26px;
+  border-top: 1px solid color-mix(in srgb, var(--card-ink) 20%, transparent);
+  color: var(--card-copy);
+  font-family: var(--font-trirong), Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 1.12vw, 1.18rem);
+  line-height: 1.45;
+}
+.valuesList li::before {
+  position: absolute;
+  top: 1.55em;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background: var(--card-accent);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
 @media (hover: hover) and (pointer: fine) {
   .identityStatement {
     transition:
@@ -270,6 +308,94 @@
   }
 }
 
+.principles {
+  padding-top: clamp(66px, 7vw, 96px);
+  color: var(--ink);
+}
+.principlesInner {
+  max-width: 1180px;
+}
+.principlesHeading {
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  justify-content: start;
+  gap: 14px;
+  margin: 0 0 26px clamp(30px, 3vw, 44px);
+  color: var(--forest);
+}
+.principlesHeading::before {
+  width: 30px;
+  height: 1px;
+  background: var(--forest);
+  content: "";
+}
+.principlesHeading h2 {
+  margin: 0;
+  font-family: var(--font-trirong), Georgia, "Times New Roman", serif;
+  font-size: clamp(1.08rem, 1.25vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.principlesHeading em {
+  font-style: italic;
+  font-weight: 500;
+}
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+.principleCard {
+  min-height: 330px;
+}
+.principleMeta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.principleIcon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  background: color-mix(in srgb, var(--card-accent) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--card-accent) 46%, transparent);
+  border-radius: 50%;
+  color: var(--card-accent);
+}
+.principleIcon svg {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.6;
+}
+.principleNumber {
+  color: color-mix(in srgb, var(--card-ink) 58%, transparent);
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+}
+.principleCard h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 470px;
+  margin: 0 0 18px;
+  color: var(--card-ink);
+  font-family: var(--font-trirong), Georgia, "Times New Roman", serif;
+  font-size: clamp(1.3rem, 1.8vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.principleCard p {
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+  margin: 0;
+  color: var(--card-copy);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
 .team {
   padding: 110px 0;
   border-top: 1px solid var(--line);
@@ -334,85 +460,6 @@
   color: var(--on-dark-muted);
 }
 
-.ribbons {
-  position: relative;
-  min-height: 520px;
-  overflow: hidden;
-  padding-top: 80px;
-}
-.ribbon {
-  width: 110%;
-  margin-left: -5%;
-  overflow: hidden;
-  padding: 18px 0;
-  background: var(--forest);
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: var(--type-profile-title);
-  line-height: 1.15;
-  white-space: nowrap;
-  transform: rotate(3deg);
-}
-.ribbonTrack {
-  display: flex;
-  width: max-content;
-  animation: ribbon-scroll 24s linear infinite;
-  will-change: transform;
-}
-.ribbonGroup {
-  display: flex;
-  flex: none;
-}
-.ribbonGroup span {
-  display: block;
-  padding-inline: 0.55em;
-}
-.ribbonGold {
-  margin-top: -8px;
-  background: var(--gold);
-  transform: rotate(-7deg);
-}
-.ribbonGold .ribbonTrack {
-  animation-direction: reverse;
-}
-.ribbons[data-reveal="ribbons"] > .ribbon {
-  transform: translate3d(-120%, 0, 0) rotate(3deg);
-}
-.ribbons[data-reveal="ribbons"] > .ribbonGold {
-  transform: translate3d(120%, 0, 0) rotate(-7deg);
-}
-.ribbons[data-reveal="ribbons"]:global(.isVisible) > .ribbon {
-  animation: ribbon-enter-left 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-.ribbons[data-reveal="ribbons"]:global(.isVisible) > .ribbonGold {
-  animation-name: ribbon-enter-right;
-  animation-delay: 120ms;
-}
-
-@keyframes ribbon-enter-left {
-  from {
-    transform: translate3d(-120%, 0, 0) rotate(3deg);
-  }
-  to {
-    transform: translate3d(0, 0, 0) rotate(3deg);
-  }
-}
-
-@keyframes ribbon-enter-right {
-  from {
-    transform: translate3d(120%, 0, 0) rotate(-7deg);
-  }
-  to {
-    transform: translate3d(0, 0, 0) rotate(-7deg);
-  }
-}
-
-@keyframes ribbon-scroll {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @media (max-width: 850px) {
   .advantagesGrid {
     grid-template-columns: 1fr;
@@ -429,11 +476,30 @@
     grid-template-columns: 1fr;
     gap: 18px;
   }
+  .identityValues .identityRow {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .principlesGrid {
+    grid-template-columns: 1fr;
+  }
+  .principleCard {
+    min-height: 0;
+  }
   .identityRow > p,
   .identityStatement:nth-child(n + 3) .identityRow > p {
     max-width: 680px;
     font-size: clamp(1.05rem, 2.6vw, 1.25rem);
     text-wrap: pretty;
+  }
+  .valuesList {
+    grid-template-columns: 1fr;
+  }
+  .principles {
+    padding-top: 58px;
+  }
+  .principleCard {
+    padding: 28px 26px 30px;
   }
 }
 
@@ -457,9 +523,6 @@
     font-size: clamp(1rem, 4vw, 1.1rem);
     line-height: 1.55;
     overflow-wrap: anywhere;
-  }
-  .ribbons {
-    min-height: 350px;
   }
 }
 
@@ -492,15 +555,5 @@
   }
   .identityVisual img {
     transition: none;
-  }
-  .ribbons[data-reveal="ribbons"] > .ribbon {
-    animation: none;
-    transform: rotate(3deg);
-  }
-  .ribbons[data-reveal="ribbons"] > .ribbonGold {
-    transform: rotate(-7deg);
-  }
-  .ribbonTrack {
-    animation-play-state: paused;
   }
 }

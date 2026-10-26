@@ -112,7 +112,7 @@ export function SiteHeader() {
   const pathname = usePathname().replace(/\/$/, "") || "/";
   const menuRef = useRef<HTMLDetailsElement>(null);
   const [mobileOpenGroup, setMobileOpenGroup] = useState<
-    "interviews" | "services" | null
+    "branches" | "interviews" | "services" | null
   >(null);
   const closeMenu = () => {
     if (menuRef.current) menuRef.current.open = false;
@@ -145,6 +145,14 @@ export function SiteHeader() {
       label: header.nav.services,
     },
     { href: "/about", label: header.nav.about },
+    {
+      id: "branches",
+      children: header.branches.items.map((label) => ({
+        label,
+        note: header.branches.comingSoon,
+      })),
+      label: header.nav.branches,
+    },
     {
       id: "interviews",
       children: interviewLinks.map((item) => ({
@@ -227,6 +235,35 @@ export function SiteHeader() {
             {header.nav.about}
           </Link>
 
+          <div className={styles.branchesGroup}>
+            <button aria-haspopup="true" type="button">
+              {header.nav.branches}
+              <span>
+                <ChevronIcon />
+              </span>
+            </button>
+            <div className={`${styles.megaMenu} ${styles.branchesMenu}`}>
+              <div className={styles.branchesMenuInner}>
+                <p>{header.nav.branches}</p>
+                <div className={styles.branchCards}>
+                  {header.branches.items.map((branch) => (
+                    <article className={styles.branchCard} key={branch}>
+                      <Image
+                        alt=""
+                        aria-hidden="true"
+                        height={256}
+                        src="/images/tsets-logo-transparent.png"
+                        width={256}
+                      />
+                      <strong>{branch}</strong>
+                      <span>{header.branches.comingSoon}</span>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className={styles.interviewGroup}>
             <Link
               className={
@@ -289,8 +326,11 @@ export function SiteHeader() {
           ref={menuRef}
         >
           <summary aria-label={header.openMenu}>
-            <Menu className={styles.menuIcon} aria-hidden="true" />
-            <X className={styles.closeIcon} aria-hidden="true" />
+            <span className={styles.mobileMenuLabel}>{header.mainNav}</span>
+            <span className={styles.mobileMenuIcon}>
+              <Menu className={styles.menuIcon} aria-hidden="true" />
+              <X className={styles.closeIcon} aria-hidden="true" />
+            </span>
           </summary>
           <div className={styles.mobilePanel}>
             <nav aria-label={header.mobileNav}>
@@ -324,16 +364,26 @@ export function SiteHeader() {
                             id={listId}
                           >
                             <div className={styles.mobileServicesListInner}>
-                              {item.children.map((child) => (
-                                <Link
-                                  href={child.href}
-                                  key={child.href}
-                                  onClick={closeMenu}
-                                  tabIndex={isOpen ? undefined : -1}
-                                >
-                                  {child.label}
-                                </Link>
-                              ))}
+                              {item.children.map((child) =>
+                                "href" in child ? (
+                                  <Link
+                                    href={child.href}
+                                    key={child.href}
+                                    onClick={closeMenu}
+                                    tabIndex={isOpen ? undefined : -1}
+                                  >
+                                    {child.label}
+                                  </Link>
+                                ) : (
+                                  <span
+                                    className={styles.mobileBranchItem}
+                                    key={child.label}
+                                  >
+                                    <span>{child.label}</span>
+                                    <small>{child.note}</small>
+                                  </span>
+                                ),
+                              )}
                             </div>
                           </div>
                         </>

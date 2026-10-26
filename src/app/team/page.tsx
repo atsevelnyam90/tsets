@@ -3,10 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TeamMemberCards } from "@/components/sections/TeamMemberCards";
-import {
-  LegalMarquee,
-  LibraryContact,
-} from "@/components/sections/ThemeSections";
+import { LibraryContact } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 import styles from "./team.module.css";
 
@@ -60,8 +57,6 @@ export default function TeamPage() {
           <TeamMemberCards />
         </div>
       </section>
-
-      <LegalMarquee />
 
       <section className={styles.awards}>
         <div className="shell">

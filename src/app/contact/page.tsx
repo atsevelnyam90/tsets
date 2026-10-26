@@ -15,7 +15,8 @@ import styles from "./contact.module.css";
 
 export default function ContactPage() {
   const { contact } = useSiteMessages();
-  const { email, phone, social } = siteContact;
+  const { address, email, phone, social } = siteContact;
+
   return (
     <>
       <section className={styles.title}>
@@ -83,17 +84,32 @@ export default function ContactPage() {
                 <span>{contact.instagramNote}</span>
               </span>
             </a>
-            <div className={styles.contactItem}>
-              <span className={styles.contactIcon}>
-                <MapPin aria-hidden="true" size={20} strokeWidth={1.7} />
-              </span>
-              <span className={styles.contactCopy}>
-                <span className={styles.contactLabel}>
-                  {contact.officeLabel}
+            <div className={styles.locationItem}>
+              <a
+                className={styles.contactItem}
+                href={address.mapHref}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <span className={styles.contactIcon}>
+                  <MapPin aria-hidden="true" size={20} strokeWidth={1.7} />
                 </span>
-                <strong>{contact.officeValue}</strong>
-                <span>{contact.officeNote}</span>
-              </span>
+                <span className={styles.contactCopy}>
+                  <span className={styles.contactLabel}>
+                    {contact.officeLabel}
+                  </span>
+                  <strong>{contact.officeValue}</strong>
+                  <span>{contact.officeNote}</span>
+                </span>
+              </a>
+              <iframe
+                allowFullScreen
+                className={styles.mapFrame}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src={address.mapEmbedHref}
+                title={`${contact.officeLabel}: ${contact.officeValue}`}
+              />
             </div>
           </div>
         </div>

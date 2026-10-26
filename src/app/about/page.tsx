@@ -1,5 +1,6 @@
 "use client";
 
+import { GraduationCap, Scale, Target, UsersRound } from "lucide-react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import { TeamMemberCards } from "@/components/sections/TeamMemberCards";
 import { TrustedLogos } from "@/components/sections/ThemeSections";
@@ -8,6 +9,7 @@ import styles from "./about.module.css";
 
 const magneticStrength = 0.06;
 const magneticMaxOffset = 12;
+const principleIcons = [UsersRound, Scale, Target, GraduationCap] as const;
 
 function moveMagneticCard(event: ReactPointerEvent<HTMLElement>) {
   if (
@@ -53,20 +55,6 @@ const magneticCardEvents = {
   onPointerMove: moveMagneticCard,
 };
 
-function RibbonTrack({ text }: { text: string }) {
-  return (
-    <div aria-hidden="true" className={styles.ribbonTrack}>
-      {[0, 1].map((group) => (
-        <div className={styles.ribbonGroup} key={group}>
-          {[0, 1, 2].map((copy) => (
-            <span key={copy}>{text}</span>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function AboutPage() {
   const { about } = useSiteMessages();
   const identityStatements = [
@@ -74,7 +62,10 @@ export default function AboutPage() {
       text: about.identity.visionText,
       title: about.identity.visionTitle,
     },
-    ...about.identity.items,
+    {
+      text: about.identity.missionText,
+      title: about.identity.missionTitle,
+    },
   ];
 
   return (
@@ -112,7 +103,63 @@ export default function AboutPage() {
               </div>
             </article>
           ))}
+          <article
+            className={`${styles.identityStatement} ${styles.identityValues}`}
+            {...magneticCardEvents}
+          >
+            <div
+              className={styles.identityRow}
+              data-reveal="fade"
+              data-reveal-delay={280}
+            >
+              <div className={styles.identityLabel}>
+                <h2>
+                  <em>{about.identity.valuesTitle}</em>
+                </h2>
+              </div>
+              <ul className={styles.valuesList}>
+                {about.identity.values.map((value) => (
+                  <li key={value}>{value}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
         </div>
+        <section className={styles.principles} id="principles">
+          <div className={`shell ${styles.principlesInner}`}>
+            <div className={styles.principlesHeading} data-reveal="fade">
+              <h2>
+                <em>{about.identity.principlesTitle}</em>
+              </h2>
+            </div>
+            <div className={styles.principlesGrid}>
+              {about.identity.principles.map((principle, index) => {
+                const Icon = principleIcons[index];
+
+                return (
+                  <article
+                    className={`${styles.identityStatement} ${styles.principleCard}`}
+                    data-reveal="fade"
+                    data-reveal-delay={index * 100}
+                    key={principle.title}
+                    {...magneticCardEvents}
+                  >
+                    <div className={styles.principleMeta}>
+                      <span className={styles.principleIcon} aria-hidden="true">
+                        <Icon />
+                      </span>
+                      <span className={styles.principleNumber}>
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <h3>{principle.title}</h3>
+                    <p>{principle.text}</p>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </section>
 
       <section className={styles.team} id="team">
@@ -139,20 +186,6 @@ export default function AboutPage() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section
-        className={styles.ribbons}
-        aria-label={about.ribbon}
-        data-motion-scope
-        data-reveal="ribbons"
-      >
-        <div className={styles.ribbon}>
-          <RibbonTrack text={about.ribbon} />
-        </div>
-        <div className={`${styles.ribbon} ${styles.ribbonGold}`}>
-          <RibbonTrack text={about.ribbon} />
         </div>
       </section>
 

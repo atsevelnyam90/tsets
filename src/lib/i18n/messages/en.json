@@ -28,9 +28,20 @@
       "services": "Services",
       "about": "About Us",
       "team": "Our Team",
+      "branches": "Branches",
       "interview": "Interview",
       "news": "News & Insights",
       "contact": "Contact Us"
+    },
+    "branches": {
+      "comingSoon": "Coming soon",
+      "items": [
+        "Khan-Uul Branch",
+        "Darkhan Branch",
+        "Umnugovi Branch",
+        "Dornogovi Branch",
+        "Erdenet Branch"
+      ]
     },
     "demos": ["Legal Representation", "Legal Advisory", "Retained Counsel"],
     "practiceLinks": [
@@ -40,7 +51,7 @@
       "Enforcement Proceedings",
       "Arbitration and Other Institutions",
       "Comprehensive Financial, Tax and Legal Advisory Services for Foreign Investors",
-      "Debt Recovery Services Representing Non-Bank Financial Institutions in Court Proceedings"
+      "Debt recovery services representing banks and non-bank financial institutions during judicial proceedings"
     ],
     "advantages": "Our Advantages"
   },
@@ -59,10 +70,10 @@
     "hide": "Hide additional template sections"
   },
   "footer": {
-    "description": "Tsets Partners Law Firm has provided legal representation, advocacy, and legal advisory services to individuals and organizations since 2017.",
+    "description": "Tsets Partners Law Firm has been providing legal representation and legal consulting services to individuals and legal entities since 2017.",
     "contactTitle": "Contact",
     "legalName": "“Өмгөөллийн Цэц Партнерс” ХХК",
-    "address": "Office 6-601, Old City Tower, Peace Avenue, 7th Khoroo, Bayanzürkh District, Ulaanbaatar, Mongolia",
+    "address": "Bayanzürkh District, East 4 Roads, Old City Tower, 6th Floor",
     "phone": "75997599",
     "linksTitle": "Links",
     "linksLabel": "Footer links",
@@ -90,17 +101,8 @@
   "shared": {
     "clients": "Client Organizations",
     "clientLogoAlt": "Client organization logo",
-    "valuesLabel": "Tsets Partners values",
-    "marquee": [
-      "rights",
-      "protection",
-      "trust",
-      "advice",
-      "advocacy",
-      "solutions"
-    ],
-    "contactEyebrow": "Get in Touch",
-    "contactTitle": "Do you need legal advice?"
+    "contactEyebrow": "Do you need legal advice?",
+    "contactTitle": "GET IN TOUCH"
   },
   "home": {
     "hero": {
@@ -109,8 +111,7 @@
       "beforeSeparator": " ",
       "emphasis": "anticipate risk",
       "afterSeparator": ", ",
-      "after": "and steadfastly protect interests",
-      "tagline": "Reliable protection within the law",
+      "after": "and protect your interests reliably and steadfastly within the law",
       "viewServices": "Learn more"
     },
     "strengthsIntro": {
@@ -149,7 +150,7 @@
         "Legal Advisory Services",
         "Retained Legal Advisory Services"
       ],
-      "quote": "Legal services are a strategic tool that enables you to foresee risks three moves ahead.",
+      "quote": "Legal services are a strategic instrument for anticipating risks and navigating challenges several moves ahead, just as in chess.",
       "quoteMeta": "Founding Partner and Attorney · 2025.06.10 · Read the Interview"
     },
     "contactImageAlt": "Legal documents with a judge's gavel and scales of justice"
@@ -157,19 +158,33 @@
   "about": {
     "identity": {
       "visionTitle": "Vision",
-      "visionText": "To be a nationally recognized law firm providing standardized legal services to clients.",
-      "items": [
+      "visionText": "To be a leading national law firm with services aligned with international standards and practices.",
+      "missionTitle": "Mission",
+      "missionText": "To adhere to lawyer’s ethics and make it our mission to provide legal services that align with international practices, client needs, and expectations.",
+      "valuesTitle": "Core Values",
+      "values": [
+        "Lawyers united by purpose",
+        "Morality and professional ethics",
+        "Client satisfaction",
+        "Professional service"
+      ],
+      "principlesTitle": "Principles",
+      "principles": [
         {
-          "title": "Mission",
-          "text": "We uphold the highest standards of legal ethics and integrity, deliver quality legal services aligned with our clients’ needs and expectations, and ensure their satisfaction."
+          "title": "Shared purpose, joint responsibility",
+          "text": "We strictly adhere to the principle of combining our knowledge, skills, and experience, supporting each other, and working as a team to implement the organization's mission, vision, and strategic goals."
         },
         {
-          "title": "Core Values",
-          "text": "We uphold justice, the rule of law, and professional ethics as the core values of our practice."
+          "title": "Integrity, independence, and ethical operation",
+          "text": "We value the rule of law, integrity, and professional independence, and strictly follow lawyers' professional ethical norms at all levels of our operations."
         },
         {
-          "title": "Principles",
-          "text": "In our work, we adhere to the rule of law, professional competence, quality, accountability, and standards."
+          "title": "Client-centered, result-oriented service",
+          "text": "We place our clients' legitimate rights, interests, and needs first, valuing mutual trust and transparent relationships."
+        },
+        {
+          "title": "Specialization and continuous development",
+          "text": "We provide legal services at a high professional level based on legal grounds, research, and evidence, and continuously develop the knowledge and skills of our team's lawyers."
         }
       ]
     },
@@ -204,12 +219,13 @@
       "intro": "We value client interests, practical outcomes, confidentiality, and lasting professional relationships.",
       "items": [
         "We prioritize client satisfaction as a fundamental principle of our practice.",
-        "Our team consists of highly experienced attorneys specializing in various fields of law.",
+        "A team composed of experienced attorneys and legal consultants.",
         "We offer flexible, results-based fee arrangements designed to minimize financial burden on our clients.",
         "We possess extensive experience in successfully protecting the rights and legitimate interests of foreign investors.",
         "We maintain and safeguard client confidentiality at the highest professional standards.",
         "Our firm operates from privately owned office premises and is fully equipped with the necessary resources.",
-        "We implement a stable human resources policy to ensure the long-term retention and development of our legal professionals."
+        "We implement a stable human resources policy to ensure the long-term retention and development of our legal professionals.",
+        "The first law firm in Mongolia to implement ISO standards."
       ]
     },
     "ribbon": "Protecting your interests with professional expertise",
@@ -331,8 +347,8 @@
       ]
     },
     "debtRecovery": {
-      "title": "Debt Recovery Services Representing Non-Bank Financial Institutions in Court Proceedings",
-      "description": "Representation of non-bank financial institutions in debt recovery matters during court proceedings and the enforcement of court judgments.",
+      "title": "Debt recovery services representing banks and non-bank financial institutions during judicial proceedings",
+      "description": "Representation of banks and non-bank financial institutions in debt recovery matters during court proceedings and the enforcement of court judgments.",
       "items": [
         "Representing clients in court proceedings and at the enforcement stage of court judgments"
       ]
@@ -458,15 +474,11 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "Ariunsanaa Oyun-Erdene graduated with a degree in law from Ikh Zasag Law School."
+            "text": "Ariunsanaa Oyun-Erdene graduated from the School of Law at Ikh Zasag University with a degree in Law. She specializes in Civil Law and Administrative Law."
           },
           {
             "type": "paragraph",
-            "text": "She provides support to the firm's attorneys and management team. Her core responsibilities include representing clients in civil and administrative courts under power of attorney, drafting and reviewing various official correspondence, documents, and contracts, as well as preparing and submitting petitions, requests, and complaints to Mongolian state and local government administrative bodies."
-          },
-          {
-            "type": "paragraph",
-            "text": "She is fluent in Mongolian and English, and has working knowledge of Korean."
+            "text": "Language: English and Korean"
           }
         ]
       },
@@ -476,11 +488,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "Narangerel Amarsaikhan holds a Bachelor of Laws (LL.B.) degree from Ikh Zasag Law School."
-          },
-          {
-            "type": "paragraph",
-            "text": "She provides comprehensive legal support to the firm's attorneys, management team, and clients. Her core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official correspondence, contracts, and other legal documentation."
+            "text": "Narangerel Amarsaikhan graduated from the School of Law at Ikh Zasag University with a degree in Law. She specializes in Administrative Law and Civil Law."
           }
         ]
       },
@@ -490,11 +498,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "Dugarmaa Enkhbat holds a Bachelor of Laws (LL.B.) degree from the Law School of Ikh Zasag International University. She also specialized in Human Resources and Business Administration at the Mongolian HR Reform Academy."
-          },
-          {
-            "type": "paragraph",
-            "text": "She provides comprehensive legal support to the firm's attorneys, management team, and clients. Her core responsibilities include assisting attorneys with civil and administrative litigation, court representation, drafting various official letters and documents, and handling requests and complaints directed to Mongolian state and local administrative organizations."
+            "text": "Dugarmaa Enkhbat graduated from the School of Law at Ikh Zasag University with a degree in Law. She specializes in Civil Law and Administrative Law."
           }
         ]
       },
@@ -504,11 +508,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "Bayarmaa Nyamlhagva holds a Bachelor of Laws (LL.B.) degree from Ikh Zasag Law School."
-          },
-          {
-            "type": "paragraph",
-            "text": "She provides comprehensive legal support to the firm's attorneys, management team, and clients. Her core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official letters, contracts, and other legal documentation."
+            "text": "Bayarmaa Nyamlhagva graduated from the School of Law at Ikh Zasag University with a degree in Law. She specializes in Corporate Law and Business Law."
           }
         ]
       },
@@ -518,11 +518,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "Khuslen Gantor holds a Bachelor of Laws (LL.B.) degree from Ikh Zasag Law School."
-          },
-          {
-            "type": "paragraph",
-            "text": "He provides comprehensive legal support to the firm's attorneys, management team, and clients. His core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official letters, contracts, and other legal documentation."
+            "text": "Khuslen Gantor graduated from the School of Law at Ikh Zasag University with a degree in Law. He specializes in Civil Law."
           }
         ]
       },
@@ -562,11 +558,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "Namuungoo Ganchuluun graduated from the University of Finance and Economics with a Bachelor of Laws (LL.B.) degree."
-          },
-          {
-            "type": "paragraph",
-            "text": "She provides comprehensive paralegal and administrative support to the firm's attorneys, executive team, and clients. Her core responsibilities include representing clients in civil and administrative disputes in court and drafting various official correspondence, contracts, and other legal documents."
+            "text": "Namuungoo Ganchuluun graduated from the University of Finance and Economics with a degree in Law. She specializes in Administrative Law and Civil Law."
           }
         ]
       }
@@ -621,16 +613,16 @@
     "instagramLabel": "Instagram",
     "instagramNote": "Visit our page",
     "officeLabel": "Address",
-    "officeValue": "Office 6-601, Old City Tower",
-    "officeNote": "Peace Avenue, 7th Khoroo, Bayanzürkh District",
+    "officeValue": "Old City Tower, 6th Floor",
+    "officeNote": "Bayanzürkh District, East 4 Roads",
     "officesTitle": "Our Office:",
     "appointment": "Schedule a Meeting",
     "appointmentSubject": "meeting request",
     "offices": [
       {
         "city": "Head Office",
-        "lineOne": "Peace Avenue, 7th Khoroo, Bayanzürkh District, Ulaanbaatar, Mongolia",
-        "lineTwo": "Office 6-601, Old City Tower",
+        "lineOne": "Bayanzürkh District, East 4 Roads",
+        "lineTwo": "Old City Tower, 6th Floor",
         "note": "Phone: 75997599"
       }
     ]
@@ -810,7 +802,7 @@
   },
   "interview": {
     "publishedAt": "June 10, 2025",
-    "title": "G. Lkhagvasuren: Sound legal advice is the compass that guides the future of your business",
+    "title": "Attorney G. Lkhagvasuren: Sound legal advice is the compass that guides the future of your business",
     "intro": "An interview with G. Lkhagvasuren, Founding Partner and Attorney at Tsets Partners, a professional law firm providing legal advisory services for the day-to-day operations of businesses.",
     "imageAlt": "G. Lkhagvasuren, Founding Partner and Attorney at Tsets Partners",
     "source": "View Original Source",

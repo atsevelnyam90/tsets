@@ -54,8 +54,8 @@ export default function NewsPage() {
     tone: "burgundy",
     visual: true,
   };
-  const cards = [leadItem, videoItems[0], videoItems[1]].filter(
-    (item): item is NewsCard => Boolean(item),
+  const cards = [leadItem, ...videoItems].sort((first, second) =>
+    second.date.localeCompare(first.date),
   );
 
   return (

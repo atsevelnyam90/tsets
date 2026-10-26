@@ -47,10 +47,23 @@
   border-left: 1px solid var(--line);
 }
 
-.contactItem:last-child {
+.locationItem {
+  display: grid;
   grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   border-top: 1px solid var(--line);
-  border-left: 0;
+}
+
+.locationItem .contactItem {
+  min-height: 280px;
+  align-items: center;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
 }
 
 a.contactItem:hover {
@@ -180,6 +193,12 @@ a.contactItem:hover {
   .contactItem + .contactItem {
     border-top: 1px solid var(--line);
     border-left: 0;
+  }
+  .locationItem {
+    grid-template-columns: 1fr;
+  }
+  .locationItem .contactItem {
+    min-height: auto;
   }
   .office {
     grid-template-columns: 1fr;

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Fragment } from "react";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 import { ContactForm } from "./ContactForm";
 import styles from "./ThemeSections.module.css";
@@ -19,12 +18,6 @@ const clientLogos = [
     href: "https://alkogroup.com/",
     src: "/images/client-alko-group.svg",
     variant: "light",
-  },
-  {
-    alt: "Практикал Даатгал",
-    href: "https://www.practical.mn/",
-    src: "/images/client-practical-insurance.png",
-    variant: "default",
   },
   {
     alt: "Милая Фүүдс",
@@ -51,6 +44,36 @@ const clientLogos = [
   {
     alt: "Монгол Тайж Металл",
     src: "/images/client-mongol-taij-metal.webp",
+    variant: "default",
+  },
+  {
+    alt: "Ар Үр Фермер ХХК",
+    src: "/images/client-ar-ur-farmer.png",
+    variant: "default",
+  },
+  {
+    alt: "Таван Богд Финанс ББСБ",
+    src: "/images/client-tavan-bogd-finance.png",
+    variant: "default",
+  },
+  {
+    alt: "Blue Spot Resort Terelj",
+    src: "/images/client-blue-spot-resort.png",
+    variant: "default",
+  },
+  {
+    alt: "Home Plaza",
+    src: "/images/client-home-plaza.png",
+    variant: "default",
+  },
+  {
+    alt: "Jemson Logistic LLC",
+    src: "/images/client-jemson-logistic.png",
+    variant: "default",
+  },
+  {
+    alt: "Хасуд Бат ХХК",
+    src: "/images/client-khasud-bat.png",
     variant: "default",
   },
 ] as const satisfies readonly ClientLogo[];
@@ -107,38 +130,13 @@ export function TrustedLogos() {
   );
 }
 
-export function LegalMarquee() {
-  const { shared } = useSiteMessages();
-  const words = (
-    <>
-      {shared.marquee.map((word) => (
-        <Fragment key={word}>
-          <span>✦</span> {word}{" "}
-        </Fragment>
-      ))}
-    </>
-  );
-
-  return (
-    <section
-      className={styles.marquee}
-      aria-label={shared.valuesLabel}
-      data-motion-scope
-    >
-      <div className={styles.marqueeTrack}>
-        <div>{words}</div>
-        <div aria-hidden="true">{words}</div>
-      </div>
-    </section>
-  );
-}
-
 export function LibraryContact() {
   const { shared } = useSiteMessages();
   return (
     <section className={styles.libraryContact}>
       <div className={`shell ${styles.contactShell}`}>
         <div className={styles.contactCard}>
+          <p className="eyebrow">{shared.contactEyebrow}</p>
           <h2>{shared.contactTitle}</h2>
           <ContactForm />
         </div>

@@ -26,7 +26,6 @@ export function SiteFooter() {
 
         <div>
           <h3 className={styles.footerTitle}>{footer.contactTitle}</h3>
-          <strong className={styles.legalName}>{footer.legalName}</strong>
           <a href={`mailto:${siteContact.email}`}>{siteContact.email}</a>
           <address>{footer.address}</address>
           <a href={siteContact.phone.href}>{footer.phone}</a>
@@ -88,7 +87,6 @@ export function SiteFooter() {
       </div>
       <div className={`shell ${styles.bottom}`}>
         <p>{footer.copyright}</p>
-        <p>{footer.services}</p>
       </div>
     </footer>
   );

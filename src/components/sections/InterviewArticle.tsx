@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import styles from "@/app/interview/interview.module.css";
-import { LegalMarquee } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 
 type InterviewArticleData = {
@@ -179,8 +178,6 @@ export function InterviewArticle({
           </div>
         </div>
       </article>
-
-      <LegalMarquee />
     </>
   );
 }

@@ -87,39 +87,6 @@
   }
 }
 
-.marquee {
-  overflow: hidden;
-  padding: 17px 0;
-  background: var(--warm);
-  color: var(--ink);
-  white-space: nowrap;
-}
-.marqueeTrack {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll 24s linear infinite;
-  will-change: transform;
-}
-.marqueeTrack > div {
-  width: max-content;
-  min-width: 100vw;
-  padding-inline: 2.5vw;
-  font-family: var(--font-display);
-  font-size: var(--type-marquee);
-  text-align: center;
-  word-spacing: 18px;
-}
-.marqueeTrack span {
-  font-size: 0.55em;
-  vertical-align: middle;
-}
-
-@keyframes marquee-scroll {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 .libraryContact {
   min-height: 760px;
   padding: 80px 0;
@@ -181,9 +148,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marqueeTrack {
-    animation-play-state: paused;
-  }
   .logoItem,
   .logoItem::after,
   .logoRow img {

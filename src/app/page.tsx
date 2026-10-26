@@ -4,11 +4,7 @@ import { ArrowUpRight, Gavel, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/sections/ContactForm";
-import { TeamMemberPlaceholder } from "@/components/sections/TeamMemberPlaceholder";
-import {
-  LegalMarquee,
-  TrustedLogos,
-} from "@/components/sections/ThemeSections";
+import { TrustedLogos } from "@/components/sections/ThemeSections";
 import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 import styles from "./page.module.css";
 
@@ -43,25 +39,33 @@ export default function HomePage() {
           </video>
         </div>
         <div className={styles.heroCopy}>
-          <h1 data-reveal="up" data-reveal-delay="100">
-            {home.hero.before}
-            {home.hero.beforeSeparator}
-            {home.hero.emphasis}
-            {home.hero.afterSeparator}
-            {home.hero.after}
-          </h1>
-          <p data-reveal="popup" data-reveal-delay="400">
-            <Gavel aria-hidden="true" size={31} /> {home.hero.tagline}
-          </p>
-          <Link
-            className={styles.heroCta}
-            data-reveal="up"
-            data-reveal-delay="500"
-            href="/contact"
-          >
-            {common.consultation}
-            <ArrowUpRight aria-hidden="true" size={18} />
-          </Link>
+          <div className={styles.heroHeading}>
+            <span
+              aria-hidden="true"
+              className={styles.heroMark}
+              data-reveal="popup"
+            >
+              <Gavel size={31} />
+            </span>
+            <div className={styles.heroHeadingContent}>
+              <h1 data-reveal="up" data-reveal-delay="100">
+                {home.hero.before}
+                {home.hero.beforeSeparator}
+                {home.hero.emphasis}
+                {home.hero.afterSeparator}
+                {home.hero.after}
+              </h1>
+              <Link
+                className={styles.heroCta}
+                data-reveal="up"
+                data-reveal-delay="400"
+                href="/contact"
+              >
+                {common.consultation}
+                <ArrowUpRight aria-hidden="true" size={18} />
+              </Link>
+            </div>
+          </div>
         </div>
         <div className={styles.heroServices}>
           {practice.areas.map((area, index) => (
@@ -110,9 +114,13 @@ export default function HomePage() {
                   <span className={styles.strengthNumber}>
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <TeamMemberPlaceholder
+                  <Image
+                    alt=""
+                    aria-hidden="true"
                     className={styles.strengthLogo}
-                    variant="mark"
+                    height={256}
+                    src="/images/tsets-logo-transparent.png"
+                    width={256}
                   />
                 </div>
                 <span className={styles.strengthKicker}>{item.kicker}</span>
@@ -143,8 +151,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <LegalMarquee />
 
       <section className={styles.darkShowcase} data-motion-scope id="news">
         <div className="shell">

@@ -29,13 +29,6 @@
   font-size: var(--type-body-lg);
 }
 
-.legalName {
-  display: block;
-  margin-bottom: 0.55rem;
-  color: #fff;
-  font-weight: 600;
-}
-
 .footer address {
   margin: 20px 0 0.55rem;
   font-style: normal;

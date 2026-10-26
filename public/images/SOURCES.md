@@ -46,7 +46,7 @@ Downloaded from Wikimedia Commons and Pexels on 2026-10-23. These are real photo
 
 ## Client logos
 
-The following logos were downloaded from the organizations' official websites on 2026-10-21 and are displayed only to identify organizations named as regular clients in the Business.mn interview. Confirm each organization's approval before public release.
+The following logos were downloaded from the organizations' official websites on 2026-10-21. Some assets are retained even when they are not currently displayed. Confirm each organization's approval before public release.
 
 | Local file | Organization | Official source |
 | --- | --- | --- |
@@ -54,3 +54,14 @@ The following logos were downloaded from the organizations' official websites on
 | `client-practical-insurance.png` | Практикал Даатгал | https://www.practical.mn/ |
 | `client-milaya-foods.png` | Милая Фүүдс | https://www.milaya.mn/ |
 | `client-agricorp.png` | Хөдөө аж ахуйн корпораци ТӨХХК | https://www.agricorp.mn/ |
+
+The following logos were extracted from the client-supplied `web zaswar.pdf` on 2026-10-26 and converted to transparent PNG files without changing their marks.
+
+| Local file | Organization | Supplied source |
+| --- | --- | --- |
+| `client-ar-ur-farmer.png` | Ар Үр Фермер ХХК | Client-supplied PDF |
+| `client-tavan-bogd-finance.png` | Таван Богд Финанс ББСБ | Client-supplied PDF |
+| `client-blue-spot-resort.png` | Blue Spot Resort Terelj | Client-supplied PDF |
+| `client-home-plaza.png` | Home Plaza | Client-supplied PDF |
+| `client-jemson-logistic.png` | Jemson Logistic LLC | Client-supplied PDF |
+| `client-khasud-bat.png` | Хасуд Бат ХХК | Client-supplied PDF |

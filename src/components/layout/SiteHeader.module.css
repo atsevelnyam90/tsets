@@ -13,11 +13,12 @@
   width: 100%;
   max-width: none;
   min-height: 88px;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto auto auto;
   align-items: center;
-  gap: 20px;
+  justify-content: space-around;
+  gap: clamp(8px, 1.1vw, 18px);
   margin: 0;
-  padding: 10px clamp(24px, 4vw, 70px);
+  padding: 10px clamp(14px, 1.6vw, 26px);
 }
 
 .logo img {
@@ -36,7 +37,8 @@
 
 .desktopNav > a,
 .practiceGroup > a,
-.interviewGroup > a {
+.interviewGroup > a,
+.branchesGroup > button {
   --magnetic-x: 0px;
   --magnetic-y: 0px;
 
@@ -45,7 +47,7 @@
   align-items: center;
   gap: 6px;
   min-height: 40px;
-  padding: 0 10px;
+  padding: 0 clamp(5px, 0.55vw, 8px);
   color: var(--nav-ink);
   font-size: var(--type-nav);
   font-weight: 600;
@@ -59,6 +61,13 @@
   will-change: transform;
 }
 
+.branchesGroup > button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .desktopNav > a[data-magnetic-active],
 .practiceGroup > a[data-magnetic-active],
 .interviewGroup > a[data-magnetic-active] {
@@ -69,11 +78,12 @@
 
 .desktopNav > a::after,
 .practiceGroup > a::after,
-.interviewGroup > a::after {
+.interviewGroup > a::after,
+.branchesGroup > button::after {
   position: absolute;
-  right: 10px;
+  right: clamp(5px, 0.55vw, 8px);
   bottom: 0;
-  left: 10px;
+  left: clamp(5px, 0.55vw, 8px);
   height: 2px;
   border-radius: 999px;
   background: var(--gold);
@@ -92,13 +102,15 @@
 
 .desktopNav > a:hover,
 .practiceGroup > a:hover,
-.interviewGroup > a:hover {
+.interviewGroup > a:hover,
+.branchesGroup > button:hover {
   color: var(--gold);
 }
 
 .desktopNav > a:hover::after,
 .practiceGroup > a:hover::after,
-.interviewGroup > a:hover::after {
+.interviewGroup > a:hover::after,
+.branchesGroup > button:hover::after {
   transform: scaleX(1);
 }
 
@@ -110,7 +122,8 @@
 }
 
 .practiceGroup,
-.interviewGroup {
+.interviewGroup,
+.branchesGroup {
   position: relative;
   display: flex;
   height: 40px;
@@ -120,7 +133,9 @@
 .practiceGroup:hover > a svg,
 .practiceGroup:focus-within > a svg,
 .interviewGroup:hover > a svg,
-.interviewGroup:focus-within > a svg {
+.interviewGroup:focus-within > a svg,
+.branchesGroup:hover > button svg,
+.branchesGroup:focus-within > button svg {
   transform: rotate(180deg);
 }
 
@@ -149,7 +164,9 @@
 .practiceGroup:hover .practiceMenu,
 .practiceGroup:focus-within .practiceMenu,
 .interviewGroup:hover .interviewMenu,
-.interviewGroup:focus-within .interviewMenu {
+.interviewGroup:focus-within .interviewMenu,
+.branchesGroup:hover .branchesMenu,
+.branchesGroup:focus-within .branchesMenu {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, 0);
@@ -281,6 +298,68 @@
   transform: scale(1.045);
 }
 
+.branchesMenu {
+  width: min(980px, calc(100vw - 48px));
+  padding: 0 44px;
+}
+
+.branchesMenuInner {
+  padding: 28px 32px 32px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(4, 36, 39, 0.16);
+  color: var(--ink);
+}
+
+.branchesMenuInner > p {
+  margin: 0 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.branchCards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.branchCard {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  gap: 8px;
+  padding: 20px 12px;
+  background: var(--warm);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.branchCard img {
+  width: 64px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.branchCard strong {
+  font-family: var(--font-display);
+  font-size: var(--type-small);
+  line-height: 1.35;
+}
+
+.branchCard span {
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .interviewMenu {
   width: min(900px, calc(100vw - 48px));
   padding: 0 44px;
@@ -380,6 +459,7 @@
 
 .mobileMenu {
   display: none;
+  width: 132px;
   color: var(--nav-ink);
   justify-self: end;
 }
@@ -387,21 +467,41 @@
 .mobileMenu summary {
   position: relative;
   z-index: 2;
-  display: grid;
-  width: 44px;
+  display: flex;
+  width: 100%;
   height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
   list-style: none;
-  place-items: center;
 }
 
 .mobileMenu summary::-webkit-details-marker {
   display: none;
 }
+.mobileMenuIcon {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  place-items: center;
+}
 .menuIcon,
 .closeIcon {
   grid-area: 1 / 1;
   transition: 160ms ease;
+}
+.mobileMenuLabel {
+  display: flex;
+  height: 22px;
+  align-items: center;
+  font-size: var(--type-caption);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .closeIcon {
   opacity: 0;
@@ -511,6 +611,31 @@
   border-bottom: 0;
 }
 
+.mobilePanel nav .mobileServicesList .mobileBranchItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  color: #d8e2e2;
+  font-size: clamp(0.9375rem, 2.5vw, 1.125rem);
+  line-height: 1.35;
+}
+
+.mobilePanel nav .mobileServicesList .mobileBranchItem:last-child {
+  border-bottom: 0;
+}
+
+.mobileBranchItem small {
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .mobileMeta {
   display: grid;
   gap: 8px;
@@ -520,6 +645,7 @@
 @media (max-width: 1280px) {
   .inner {
     grid-template-columns: 1fr auto auto;
+    justify-content: normal;
     min-height: 76px;
     padding: 10px 30px;
   }
@@ -540,18 +666,28 @@
 
 @media (max-width: 480px) {
   .inner {
-    gap: 10px;
-    padding-inline: 16px;
+    gap: 8px;
+    padding-inline: 12px;
   }
   .logo img {
-    width: 60px;
+    width: 54px;
+  }
+  .mobileMenu summary {
+    gap: 6px;
+  }
+  .mobileMenu {
+    width: 116px;
+  }
+  .mobileMenuLabel {
+    font-size: 0.65rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .desktopNav > a,
   .practiceGroup > a,
-  .interviewGroup > a {
+  .interviewGroup > a,
+  .branchesGroup > button {
     transform: none;
     transition: color 180ms ease;
   }

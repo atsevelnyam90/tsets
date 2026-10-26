@@ -116,7 +116,7 @@ const en = {
     speakerName: "B. Bat-Erdene",
     speakerRole: "Partner and Attorney",
     title:
-      "B. Bat-Erdene: Documenting Every Handover Helps Prevent Substantial Losses",
+      "Attorney B. Bat-Erdene: Documenting Every Handover Helps Prevent Substantial Losses",
   },
   "company-charter": {
     contents: "Interview questions",
@@ -209,7 +209,7 @@ const en = {
     speakerName: "G. Lkhagvasuren",
     speakerRole: "Founder and Attorney",
     title:
-      "Company Articles of Association: The Greatest Guarantee for Protecting a Business Against Risk",
+      "Attorney G. Lkhagvasuren: Company Articles of Association Are the Greatest Guarantee for Protecting a Business Against Risk",
   },
   "insurance-risk": {
     contents: "Interview questions",
@@ -288,7 +288,8 @@ const en = {
     sourceLabel: "View original source",
     speakerName: "G. Lkhagvasuren",
     speakerRole: "Founder and Attorney",
-    title: "Managing Financial Risks Through Insurance",
+    title:
+      "Attorney G. Lkhagvasuren: Managing Financial Risks Through Insurance",
   },
 } satisfies Record<BusinessInterview["slug"], InterviewTranslation>;
 
@@ -382,7 +383,7 @@ const zh = {
     sourceLabel: "查看原文",
     speakerName: "B.巴特额尔登",
     speakerRole: "合伙人、律师",
-    title: "B.巴特额尔登：对每一次交接进行书面记录，可防止重大损失",
+    title: "律师B.巴特额尔登：对每一次交接进行书面记录，可防止重大损失",
   },
   "company-charter": {
     contents: "专访问题",
@@ -472,7 +473,7 @@ const zh = {
     sourceLabel: "查看原文",
     speakerName: "G.勒哈格瓦苏伦",
     speakerRole: "创始人、律师",
-    title: "公司章程：保护企业抵御风险的最大保障",
+    title: "律师G.勒哈格瓦苏伦：公司章程是保护企业抵御风险的最大保障",
   },
   "insurance-risk": {
     contents: "专访问题",
@@ -549,7 +550,7 @@ const zh = {
     sourceLabel: "查看原文",
     speakerName: "G.勒哈格瓦苏伦",
     speakerRole: "创始人、律师",
-    title: "通过保险管理财务风险",
+    title: "律师G.勒哈格瓦苏伦：通过保险管理财务风险",
   },
 } satisfies Record<BusinessInterview["slug"], InterviewTranslation>;
 

@@ -6,12 +6,12 @@
 
 .trigger {
   display: flex;
-  min-width: 104px;
+  min-width: 92px;
   min-height: 44px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 0 14px;
+  gap: 7px;
+  padding: 0 10px;
   border: 1px solid var(--nav-border);
   border-radius: 12px;
   background: var(--nav-bg);
