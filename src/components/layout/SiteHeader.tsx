@@ -4,7 +4,11 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
+import {
+  type PointerEvent as ReactPointerEvent,
+  useRef,
+  useState,
+} from "react";
 import {
   usePublicLocale,
   useSiteMessages,
@@ -22,7 +26,7 @@ const practiceLinks = [
   },
   {
     href: "/practice-areas/business-advisory",
-    image: "/images/practice-menu-advisory.jpg",
+    image: "/images/service-mongolia-legal-advisory.jpg",
   },
   {
     href: "/practice-areas/retained-advisory",
@@ -30,13 +34,68 @@ const practiceLinks = [
   },
   {
     href: "/practice-areas/enforcement-proceedings",
-    image: "/images/practice-menu-103.jpg",
+    image: "/images/service-mongolia-enforcement.jpg",
   },
   {
     href: "/practice-areas/arbitration",
     image: "/images/business-advice.avif",
   },
+  {
+    href: "/practice-areas/foreign-investor-advisory",
+    image: "/images/service-mongolia-foreign-investment.jpg",
+  },
+  {
+    href: "/practice-areas/nbfi-debt-recovery",
+    image: "/images/service-mongolia-nbfi-recovery.jpg",
+  },
 ] as const;
+
+const magneticStrength = 0.22;
+const magneticMaxOffset = 10;
+
+function moveMagneticLink(event: ReactPointerEvent<HTMLAnchorElement>) {
+  if (
+    event.pointerType !== "mouse" ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  const link = event.currentTarget;
+  const bounds = link.getBoundingClientRect();
+  const offsetX = Math.max(
+    -magneticMaxOffset,
+    Math.min(
+      magneticMaxOffset,
+      (event.clientX - (bounds.left + bounds.width / 2)) * magneticStrength,
+    ),
+  );
+  const offsetY = Math.max(
+    -magneticMaxOffset,
+    Math.min(
+      magneticMaxOffset,
+      (event.clientY - (bounds.top + bounds.height / 2)) * magneticStrength,
+    ),
+  );
+
+  link.dataset.magneticActive = "";
+  link.style.setProperty("--magnetic-x", `${offsetX}px`);
+  link.style.setProperty("--magnetic-y", `${offsetY}px`);
+}
+
+function resetMagneticLink(event: ReactPointerEvent<HTMLAnchorElement>) {
+  const link = event.currentTarget;
+
+  delete link.dataset.magneticActive;
+  link.style.setProperty("--magnetic-x", "0px");
+  link.style.setProperty("--magnetic-y", "0px");
+}
+
+const magneticLinkEvents = {
+  onPointerCancel: resetMagneticLink,
+  onPointerLeave: resetMagneticLink,
+  onPointerMove: moveMagneticLink,
+};
 
 function ChevronIcon() {
   return (
@@ -94,6 +153,7 @@ export function SiteHeader() {
       })),
       label: header.nav.interview,
     },
+    { href: "/news", label: header.nav.news },
     { href: "/contact", label: header.nav.contact },
   ] as const;
   return (
@@ -113,6 +173,7 @@ export function SiteHeader() {
           <Link
             className={pathname === "/" ? styles.active : undefined}
             href="/"
+            {...magneticLinkEvents}
           >
             {header.nav.home}
           </Link>
@@ -125,6 +186,7 @@ export function SiteHeader() {
                   : undefined
               }
               href={practiceLinks[0].href}
+              {...magneticLinkEvents}
             >
               {header.nav.services}
               <span>
@@ -160,6 +222,7 @@ export function SiteHeader() {
           <Link
             className={pathname === "/about" ? styles.active : undefined}
             href="/about"
+            {...magneticLinkEvents}
           >
             {header.nav.about}
           </Link>
@@ -170,6 +233,7 @@ export function SiteHeader() {
                 pathname.startsWith("/interview") ? styles.active : undefined
               }
               href="/interview"
+              {...magneticLinkEvents}
             >
               {header.nav.interview}
               <span>
@@ -198,8 +262,16 @@ export function SiteHeader() {
             </div>
           </div>
           <Link
+            className={pathname === "/news" ? styles.active : undefined}
+            href="/news"
+            {...magneticLinkEvents}
+          >
+            {header.nav.news}
+          </Link>
+          <Link
             className={pathname === "/contact" ? styles.active : undefined}
             href="/contact"
+            {...magneticLinkEvents}
           >
             {header.nav.contact}
           </Link>

@@ -32,20 +32,26 @@ export type ServicePageKey =
   | "business-advisory"
   | "retained-advisory"
   | "enforcement-proceedings"
-  | "arbitration";
+  | "arbitration"
+  | "foreign-investor-advisory"
+  | "nbfi-debt-recovery";
 
 type ParentServiceKey =
   | "litigation"
   | "advisory"
   | "retained"
   | "enforcement"
-  | "arbitration";
+  | "arbitration"
+  | "foreignInvestment"
+  | "debtRecovery";
 
 const parentServiceByRoute: Record<ServicePageKey, ParentServiceKey> = {
   arbitration: "arbitration",
   "business-advisory": "advisory",
+  "foreign-investor-advisory": "foreignInvestment",
   "enforcement-proceedings": "enforcement",
   litigation: "litigation",
+  "nbfi-debt-recovery": "debtRecovery",
   "retained-advisory": "retained",
 };
 
@@ -64,7 +70,11 @@ const serviceCardIcons = {
     ],
   ],
   arbitration: [[Scale]],
+  debtRecovery: [[Gavel]],
   enforcement: [[Gavel]],
+  foreignInvestment: [
+    [SearchCheck, Scale, FileSignature, Building2, Pickaxe, ReceiptText],
+  ],
   litigation: [
     [
       FileSignature,
@@ -118,6 +128,20 @@ export function ServiceDetailPage({ service }: ServiceDetailPageProps) {
         description: practice.litigation[4].description,
         items: practice.litigation[4].items,
         title: practice.litigation[4].title,
+      };
+    }
+    if (parentService === "foreignInvestment") {
+      return {
+        description: practice.foreignInvestment.description,
+        items: practice.foreignInvestment.items,
+        title: practice.foreignInvestment.title,
+      };
+    }
+    if (parentService === "debtRecovery") {
+      return {
+        description: practice.debtRecovery.description,
+        items: practice.debtRecovery.items,
+        title: practice.debtRecovery.title,
       };
     }
 

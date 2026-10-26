@@ -7,6 +7,7 @@ import { useSiteMessages } from "@/lib/i18n/PublicI18nProvider";
 import { siteContact } from "@/lib/site-contact";
 import type { TeamMemberSlug } from "@/lib/team-members";
 import { teamMembers } from "@/lib/team-members";
+import { TeamMemberPlaceholder } from "./TeamMemberPlaceholder";
 import styles from "./TeamMemberProfile.module.css";
 
 export function TeamMemberProfile({ slug }: { slug: TeamMemberSlug }) {
@@ -35,9 +36,7 @@ export function TeamMemberProfile({ slug }: { slug: TeamMemberSlug }) {
                   src={member.image}
                 />
               ) : (
-                <span aria-hidden="true" className={styles.placeholder}>
-                  {profile.name.charAt(0)}
-                </span>
+                <TeamMemberPlaceholder className={styles.placeholder} />
               )}
             </div>
             <div className={styles.copy}>

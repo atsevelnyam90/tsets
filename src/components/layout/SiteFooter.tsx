@@ -42,6 +42,7 @@ export function SiteFooter() {
               {header.nav.team}
             </Link>
             <Link href="/interview">{header.nav.interview}</Link>
+            <Link href="/news">{header.nav.news}</Link>
             <Link href="/contact">{header.nav.contact}</Link>
           </nav>
         </div>

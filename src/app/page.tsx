@@ -1,16 +1,10 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  Gavel,
-  LockKeyhole,
-  Quote,
-  Scale,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowUpRight, Gavel, Quote } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { TeamMemberPlaceholder } from "@/components/sections/TeamMemberPlaceholder";
 import {
   LegalMarquee,
   TrustedLogos,
@@ -29,8 +23,6 @@ const serviceRoutes = [
   "/practice-areas/business-advisory",
   "/practice-areas/retained-advisory",
 ] as const;
-
-const strengthIcons = [ShieldCheck, Scale, LockKeyhole] as const;
 
 export default function HomePage() {
   const { common, home, practice, shared } = useSiteMessages();
@@ -99,32 +91,35 @@ export default function HomePage() {
               <p className="eyebrow">{home.strengthsIntro.eyebrow}</p>
               <h2>{home.strengthsIntro.title}</h2>
             </div>
-            <p data-reveal="up" data-reveal-delay="100">
+            <blockquote
+              className={styles.statementQuote}
+              data-reveal="up"
+              data-reveal-delay="100"
+            >
               {home.strengthsIntro.text}
-            </p>
+            </blockquote>
           </div>
           <div className={styles.strengthGrid}>
-            {home.strengths.map((item, index) => {
-              const Icon = strengthIcons[index] ?? ShieldCheck;
-
-              return (
-                <article
-                  data-reveal="up"
-                  data-reveal-delay={index * 100}
-                  key={item.title}
-                >
-                  <div className={styles.strengthCardHeader}>
-                    <span className={styles.strengthNumber}>
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <Icon aria-hidden="true" className={styles.strengthIcon} />
-                  </div>
-                  <span className={styles.strengthKicker}>{item.kicker}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              );
-            })}
+            {home.strengths.map((item, index) => (
+              <article
+                data-reveal="up"
+                data-reveal-delay={index * 100}
+                key={item.title}
+              >
+                <div className={styles.strengthCardHeader}>
+                  <span className={styles.strengthNumber}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <TeamMemberPlaceholder
+                    className={styles.strengthLogo}
+                    variant="mark"
+                  />
+                </div>
+                <span className={styles.strengthKicker}>{item.kicker}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -155,9 +150,13 @@ export default function HomePage() {
         <div className="shell">
           <div className={styles.darkIntro}>
             <h2 data-reveal="up">{home.showcase.title}</h2>
-            <p data-reveal="up" data-reveal-delay="100">
+            <blockquote
+              className={styles.statementQuote}
+              data-reveal="up"
+              data-reveal-delay="100"
+            >
               {home.showcase.text}
-            </p>
+            </blockquote>
           </div>
         </div>
         <div className={styles.gallery}>
@@ -170,8 +169,9 @@ export default function HomePage() {
         </div>
 
         <div className={`shell ${styles.testimonial}`} data-reveal="up">
-          <Quote aria-hidden="true" size={38} strokeWidth={1} />
-          <div className={styles.stars}>★★★★★</div>
+          <div aria-hidden="true" className={styles.quoteMark}>
+            <Quote size={38} strokeWidth={1.25} />
+          </div>
           <blockquote>{home.showcase.quote}</blockquote>
           <strong>{common.founder}</strong>
           <span>

@@ -29,6 +29,7 @@
       "about": "About Us",
       "team": "Our Team",
       "interview": "Interview",
+      "news": "News & Insights",
       "contact": "Contact Us"
     },
     "demos": ["Legal Representation", "Legal Advisory", "Retained Counsel"],
@@ -37,7 +38,9 @@
       "Legal Advisory Services",
       "Retained Legal Advisory Services",
       "Enforcement Proceedings",
-      "Arbitration and Other Institutions"
+      "Arbitration and Other Institutions",
+      "Comprehensive Financial, Tax and Legal Advisory Services for Foreign Investors",
+      "Debt Recovery Services Representing Non-Bank Financial Institutions in Court Proceedings"
     ],
     "advantages": "Our Advantages"
   },
@@ -152,6 +155,24 @@
     "contactImageAlt": "Legal documents with a judge's gavel and scales of justice"
   },
   "about": {
+    "identity": {
+      "visionTitle": "Vision",
+      "visionText": "To be a nationally recognized law firm providing standardized legal services to clients.",
+      "items": [
+        {
+          "title": "Mission",
+          "text": "We uphold the highest standards of legal ethics and integrity, deliver quality legal services aligned with our clients’ needs and expectations, and ensure their satisfaction."
+        },
+        {
+          "title": "Core Values",
+          "text": "We uphold justice, the rule of law, and professional ethics as the core values of our practice."
+        },
+        {
+          "title": "Principles",
+          "text": "In our work, we adhere to the rule of law, professional competence, quality, accountability, and standards."
+        }
+      ]
+    },
     "hero": {
       "imageAlt": "Attorneys meeting with a client",
       "eyebrow": "Since 2017",
@@ -296,6 +317,25 @@
         "Acting as legal representative and counsel in court decision enforcement proceedings",
         "Preparing legal opinions and conducting legal due diligence"
       ]
+    },
+    "foreignInvestment": {
+      "title": "Comprehensive Financial, Tax and Legal Advisory Services for Foreign Investors",
+      "description": "Comprehensive financial, tax, and legal advisory services relating to foreign investment, projects, and business operations.",
+      "items": [
+        "Research on legislation and regulations relating to foreign investment",
+        "Legal analysis tailored to specific projects",
+        "Drafting of investment and cooperation agreements",
+        "Establishment of foreign-invested legal entities and preparation of related documentation",
+        "Advisory services regarding the acquisition and transfer of mineral exploration and mining licences",
+        "Financial and tax advisory services relating to foreign investment and business operations"
+      ]
+    },
+    "debtRecovery": {
+      "title": "Debt Recovery Services Representing Non-Bank Financial Institutions in Court Proceedings",
+      "description": "Representation of non-bank financial institutions in debt recovery matters during court proceedings and the enforcement of court judgments.",
+      "items": [
+        "Representing clients in court proceedings and at the enforcement stage of court judgments"
+      ]
     }
   },
   "team": {
@@ -339,7 +379,7 @@
       "instagramLabel": "Instagram page",
       "lkhagvasuren-ganbold": {
         "name": "G. Lkhagvasuren",
-        "role": "Founder, Executive Director, Attorney at Law",
+        "role": "Partner, Chief Executive Officer",
         "bio": [
           {
             "type": "paragraph",
@@ -357,7 +397,7 @@
       },
       "bat-erdene-bayarsaikhan": {
         "name": "B. Bat-Erdene",
-        "role": "Co-Founder, Attorney at Law",
+        "role": "Partner, Attorney at Law",
         "bio": [
           {
             "type": "paragraph",
@@ -367,36 +407,38 @@
       },
       "erdenebold-tsegmid": {
         "name": "Ts. Erdenebold",
-        "role": "Legal Counsel",
+        "role": "Consulting Lawyer / Legal Advisor",
         "bio": [
           {
             "type": "paragraph",
-            "text": "Erdenebold Tsegmid graduated from Kyiv State University (USSR) as an International Lawyer and from the University of Leeds (UK) as an English Translator. He holds Ph.D. degrees from the Institute of State and Law of the Russian Academy of Sciences and The George Washington University (USA)."
+            "text": "Tsagandorjiin Erdenebold graduated from Kyiv State University of the Russian Federation (the Soviet Union at that time) as an International Lawyer, and from the University of Leeds in the United Kingdom as an English Translator. He also holds doctorate degrees from the Institute of State and Law of the Russian Federation and The George Washington University in the United States."
           },
           { "type": "heading", "text": "Work Experience" },
           {
             "type": "paragraph",
-            "text": "He brings extensive expertise from working in legal advisory and executive management roles across public, private, and international sectors:"
+            "text": "He has rich experience working in legal counsel and management positions across the public sector, private sector, and international organizations."
           },
           {
             "type": "bullet",
-            "text": "Public & International Sectors: He served in key roles including Referent at the Secretariat of the Presidium of the People's Great Hural, Foreign Policy Advisor to the Parliament (State Great Hural) of Mongolia, Head of the Foreign Relations Department of the Governor's Office of Ulaanbaatar City, and Advisor to the Minister of Mining and Heavy Industry. Additionally, he managed international trade, GATT, and UNCITRAL projects for the World Bank, Asian Development Bank, European Bank for Reconstruction and Development (EBRD), and the United Nations Development Programme (UNDP), where he continues to serve as a contracted translator."
+            "text": "Government Sector: Served as a Referent at the Executive Office of the Presidium of the People's Great Hural, Foreign Policy Advisor to the State Great Hural (Parliament) of Mongolia, Head of the Foreign Relations Department of the Governor's Office of the Capital City, and Advisor to the Minister of Mining and Heavy Industry. He has also managed projects related to international trade, GATT, and UNCITRAL for the World Bank, Asian Development Bank, European Bank for Reconstruction and Development, and the United Nations Development Programme (UNDP), and continues to serve as a contracted translator for UNDP to this day."
           },
           {
             "type": "bullet",
-            "text": "Legal Sector & Consulting: He represented the U.S. law firm \"Buxbaum & Choy,\" pioneering international consulting services in Mongolia. He co-founded the international law firm \"New Grata JLPV\" with foreign lawyers and served as its Executive Director. His track record includes assisting \"Energy Resources\" LLC with its IPO on the Hong Kong Stock Exchange, aiding Mongolian companies in listing on the U.S. NASDAQ, and serving as an international legal advisor for the power plant project of \"Erdenes Tavan Tolgoi\" JSC. Most recently, he served as Head of the Legal Department at \"New Ulaanbaatar International Airport\" LLC."
+            "text": "Private Sector: Worked as a representative of the U.S. law firm \"Buxbaum & Choy,\" pioneering international consulting services in Mongolia. Subsequently, he co-founded the international law firm \"New Grata JLPV\" with foreign lawyers and served as its Executive Director. His experience includes assisting \"Energy Resources\" company with its listing on the Hong Kong Stock Exchange, helping Mongolian companies trade shares on the U.S. NASDAQ exchange, and serving as an international legal advisor for the Power Plant project of \"Erdenes Tavan Tolgoi\" company. Most recently, he worked as the Head of the Legal Department at \"New Ulaanbaatar International Airport\" LLC."
           },
           {
             "type": "bullet",
-            "text": "Academic & Research Work: He has served as Director of the School of Humanities at the Mongolian University of Science and Technology (MUST), Visiting Professor at Mahidol University in Thailand, and Professor at both the National University of Mongolia and City University, contributing significantly to training the next generation of lawyers. Over his career, he has published more than 20 books, textbooks, and academic articles."
+            "text": "University & Research: Contributed to training future lawyers by serving as Director of the School of Humanities at the Mongolian University of Science and Technology, Visiting Professor at Mahidol University in Thailand, and Professor at the National University of Mongolia and CITY University. During this time, he has published over 20 books, textbooks, and research articles."
           },
+          { "type": "heading", "text": "Awards" },
           {
             "type": "paragraph",
-            "text": "Awards: He was awarded the state honor \"Order of the Polar Star\" (Altan Gadas) and the title of \"Leading Worker of Education.\""
+            "text": "Awarded Mongolia's State Supreme Honor, the \"Order of the Polar Star\" (Altan Gadas), and the title of \"Leading Worker in Education.\""
           },
+          { "type": "heading", "text": "Languages" },
           {
             "type": "paragraph",
-            "text": "He is fluent in Mongolian, Russian, and English, and has working knowledge of French."
+            "text": "Fully proficient in Mongolian, Russian, and English, with knowledge of French."
           }
         ]
       },
@@ -412,7 +454,7 @@
       },
       "ariunsanaa-oyun-erdene": {
         "name": "O. Ariunsanaa",
-        "role": "Attorney Assistant",
+        "role": "Paralegal",
         "bio": [
           {
             "type": "paragraph",
@@ -430,7 +472,7 @@
       },
       "narangerel-amarsaikhan": {
         "name": "A. Narangerel",
-        "role": "Attorney Assistant",
+        "role": "Paralegal",
         "bio": [
           {
             "type": "paragraph",
@@ -444,7 +486,7 @@
       },
       "dugarmaa-enkhbat": {
         "name": "E. Dugarmaa",
-        "role": "Attorney Assistant",
+        "role": "Paralegal",
         "bio": [
           {
             "type": "paragraph",
@@ -458,7 +500,7 @@
       },
       "bayarmaa-nyamlhagva": {
         "name": "N. Bayarmaa",
-        "role": "Attorney Assistant",
+        "role": "Paralegal",
         "bio": [
           {
             "type": "paragraph",
@@ -472,7 +514,7 @@
       },
       "khuslen-gantor": {
         "name": "G. Khuslen",
-        "role": "Attorney Assistant",
+        "role": "Paralegal",
         "bio": [
           {
             "type": "paragraph",
@@ -483,6 +525,50 @@
             "text": "He provides comprehensive legal support to the firm's attorneys, management team, and clients. His core responsibilities include assisting in representing clients in civil and administrative disputes in court, as well as drafting various official letters, contracts, and other legal documentation."
           }
         ]
+      },
+      "ganchuluun-lkhagvajav": {
+        "name": "L. Ganchuluun",
+        "role": "Chief Counsel, Lawyer",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Lhagvajav Ganchuluun is the Chief Counsel and co-founder of Tsets Partners Law Firm, as well as a lawyer and member of the Mongolian Bar Association."
+          }
+        ]
+      },
+      "tamir-batdelger": {
+        "name": "B. Tamir",
+        "role": "Attorney at Law",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Batdelgeriin Tamir is an attorney at law with 10 years of experience, specializing in business law and corporate law. He graduated from the National University of Mongolia with a Bachelor of Laws (LL.B.) degree. He is an attorney at law and a member of both the Mongolian Bar Association and the Association of Mongolian Advocates."
+          }
+        ]
+      },
+      "oyunzul-baasandorj": {
+        "name": "B. Oyunzul",
+        "role": "Attorney at Law",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Baasandorjiin Oyunzul is an attorney at law with 9 years of experience, specializing in civil law. She graduated from Ikh Zasag Law School with a Bachelor of Laws (LL.B.) degree. She is an attorney at law and a member of both the Mongolian Bar Association and the Association of Mongolian Advocates."
+          }
+        ]
+      },
+      "namuungoo-ganchuluun": {
+        "name": "G. Namuungoo",
+        "role": "Paralegal",
+        "bio": [
+          {
+            "type": "paragraph",
+            "text": "Namuungoo Ganchuluun graduated from the University of Finance and Economics with a Bachelor of Laws (LL.B.) degree."
+          },
+          {
+            "type": "paragraph",
+            "text": "She provides comprehensive paralegal and administrative support to the firm's attorneys, executive team, and clients. Her core responsibilities include representing clients in civil and administrative disputes in court and drafting various official correspondence, contracts, and other legal documents."
+          }
+        ]
       }
     },
     "groups": [
@@ -490,7 +576,7 @@
         "name": "Litigation Team",
         "role": "Advocacy and legal representation"
       },
-      { "name": "Legal Assistants", "role": "Research and case support" },
+      { "name": "Paralegals", "role": "Research and case support" },
       {
         "name": "Business Advisory Team",
         "role": "One-time and retained legal advisory"
@@ -548,6 +634,179 @@
         "note": "Phone: 75997599"
       }
     ]
+  },
+  "news": {
+    "masthead": {
+      "eyebrow": "Tsets Partners",
+      "title": "News & Insights",
+      "intro": "Legal updates, practical guidance, firm news, and video content."
+    },
+    "lead": {
+      "category": "Court decision · Construction law",
+      "visualLabel": "Court decision",
+      "title": "Supreme Court invalidates an unlawful provision in a government-approved regulation",
+      "intro": "The Supreme Court of Mongolia invalidated Article 10.3 of the Regulation on Commissioning Buildings and Structures.",
+      "date": "2026.10.08"
+    },
+    "topStories": {
+      "title": "Top stories",
+      "items": [
+        {
+          "category": "Contracts",
+          "title": "How should long-term contracts address price changes?",
+          "intro": "Contract provisions designed for inflation, exchange rates, and changing operating costs.",
+          "date": "2 hours ago"
+        },
+        {
+          "category": "Employment law",
+          "title": "Five reasons to update an employer's internal policies",
+          "intro": "A review of the rules most likely to create issues in day-to-day operations.",
+          "date": "5 hours ago"
+        },
+        {
+          "category": "Firm news",
+          "title": "Tsets Partners to host a business-law training session",
+          "intro": "An open session on corporate governance, contracts, and legal risk.",
+          "date": "Yesterday"
+        }
+      ]
+    },
+    "mostRead": {
+      "title": "Most read",
+      "items": [
+        "A legal checklist before signing a contract",
+        "The right way to document corporate receivables",
+        "What to do when an insurance claim is denied",
+        "Defining employee responsibility in an agreement"
+      ]
+    },
+    "videos": {
+      "title": "Video",
+      "intro": "Watch practical explanations and guidance from our lawyers on YouTube.",
+      "watch": "Watch on YouTube",
+      "items": [
+        {
+          "category": "Business law",
+          "title": "Executives: be cautious with your signature",
+          "intro": "Attorney G. Lkhagvasuren discusses common business disputes, ways to protect legal interests, and the risks of generic contract templates.",
+          "duration": "33:19"
+        },
+        {
+          "category": "Business law",
+          "title": "How can a business comply with the law?",
+          "intro": "Tsets Partners managing director and attorney G. Lkhagvasuren discusses aligning business operations with legal requirements.",
+          "duration": "54:38"
+        }
+      ]
+    },
+    "article": {
+      "back": "Back to News & Insights",
+      "readingTime": "6 min read",
+      "sourceLabel": "View the original post on Facebook",
+      "leadDetail": {
+        "overviewTitle": "Background to the dispute",
+        "implementationTitle": "Legal effect of the decision",
+        "body": [
+          "Article 10.3 of the Regulation on Commissioning Buildings and Structures, revised by Government Resolution No. 212 of 2021, prohibited a commissioning commission from working on a building found to have been used unless the matter had first been resolved by a court.",
+          "Attorney B. Bat-Erdene of Tsets Partners challenged whether this restriction complied with the law. After the case was heard at all three court levels, the Supreme Court of Mongolia upheld the complaint and invalidated Article 10.3.",
+          "While the provision remained in force, authorities treated the placement of equipment, furniture, or other items in a building as evidence that the building had been used and, on that basis, declined to convene a commissioning commission.",
+          "The Construction Law, however, contains no rule permitting an application for a commissioning commission to be rejected, or the commission itself to be prohibited, on that ground.",
+          "Invalidating Article 10.3 therefore has an important legal effect on the building commissioning process.",
+          "Where an applicant satisfies the statutory requirements and applies to commission a building, the competent authority may no longer refuse to convene the commission on a ground not provided by law.",
+          "The placement of equipment or furniture alone cannot be treated as conclusive proof of use. A commission must proceed under the applicable law and regulations and decide whether the building may be commissioned based on the actual circumstances and statutory requirements."
+        ],
+        "keyPoints": [
+          "Protects the rights of applicants seeking to commission a building.",
+          "Limits administrative refusals based on grounds not provided by law.",
+          "Brings the commissioning process into line with statutory requirements.",
+          "Protects the lawful rights and interests of individuals and legal entities."
+        ]
+      },
+      "body": [
+        "This article provides a practical overview of the main legal rules and considerations relevant to the topic.",
+        "In addition to statutory requirements, the organization should review whether its internal policies, agreements, and decision-making procedures operate consistently with one another.",
+        "Looking at a single agreement or document in isolation is rarely enough to identify the full legal risk. The rights and duties of each party, information-sharing procedures, and liability provisions should be considered together.",
+        "Unclear authority, approval levels, or document-execution procedures can increase the likelihood of disputes during implementation. Mapping internal approvals, signatures, and record keeping in advance helps create a reliable process.",
+        "Before implementing a change, existing documents should be reviewed and any conflicting or duplicated provisions aligned. The people and counterparties affected by the change should also receive clear and timely information.",
+        "Decisions, approvals, and material communications should be retained in a form that can be verified later. For a specific matter, professional legal advice can help define the risks and the steps that should be taken in advance."
+      ],
+      "keyPointsTitle": "Key points to consider",
+      "overviewTitle": "The essential context",
+      "implementationTitle": "Putting it into practice",
+      "keyPoints": [
+        "Check that the relevant agreements, policies, and decisions are consistent with one another.",
+        "State each party's rights, duties, timelines, payment terms, and liability clearly.",
+        "Keep changes, approvals, and material communications in a verifiable form."
+      ],
+      "videoBody": [
+        "This video gives a concise explanation of the main legal rules and practical considerations relevant to the topic.",
+        "The principles explained in the video should be checked against the organization's existing agreements, policies, and actual operating practices.",
+        "Defining rights, duties, and the sequence of required documents in advance can reduce misunderstandings and dispute risk during implementation.",
+        "Every organization has different circumstances, so professional legal advice is recommended for a specific matter."
+      ],
+      "videoDetails": [
+        {
+          "body": [
+            "In this Business MN episode, Tsets Partners founder and attorney G. Lkhagvasuren discusses disputes commonly encountered in business and practical ways to protect legal interests before problems arise.",
+            "The conversation emphasizes reviewing the substance of a document, the parties' rights and duties, and liability terms before an executive signs it. It also explains why a generic contract downloaded from the internet may not reflect a business's actual circumstances or risks.",
+            "Recording agreements, responsibilities, and material communications in writing—and preserving supporting evidence—creates an essential foundation for protecting a party's position if a dispute occurs.",
+            "The episode also covers disputes with foreign partners, legal risk protection when starting a business, founder disputes, and the importance of a properly tailored company charter."
+          ],
+          "keyPoints": [
+            "Review the rights, duties, liabilities, and risks in full before signing an agreement.",
+            "Confirm oral agreements and material communications in writing and retain the supporting record.",
+            "Do not rely on a generic template; tailor contracts and the company charter to the actual business."
+          ]
+        },
+        {
+          "body": [
+            "In this episode of Terminal 1.0's Law and Legal Affairs program, Tsets Partners managing director and attorney G. Lkhagvasuren discusses how businesses can align their operations with the law.",
+            "Organizing business decisions, day-to-day operations, and documentation in line with applicable legislation is a foundation for managing legal risk before it becomes a dispute.",
+            "Legal requirements are most effective when considered during planning and decision-making, rather than only after a problem has already arisen.",
+            "Because every organization has a different structure and operating context, compliance should be assessed against its actual circumstances and professional legal advice obtained where appropriate."
+          ],
+          "keyPoints": [
+            "Align business operations, decisions, and documentation with applicable legislation.",
+            "Manage legal risk through planning and internal processes before an issue arises.",
+            "Assess compliance against the organization's actual circumstances and seek professional advice where needed."
+          ]
+        }
+      ],
+      "disclaimer": "This material is intended for general legal information only."
+    },
+    "latest": {
+      "eyebrow": "Latest updates",
+      "title": "News & Insights",
+      "intro": "Legal updates, firm news, and practical YouTube videos, all in one place.",
+      "read": "Read more",
+      "source": "Source",
+      "items": [
+        {
+          "category": "Legal update",
+          "date": "2026.10.20",
+          "title": "A review of legal changes relevant to business owners",
+          "intro": "A concise overview of recent regulatory changes that may affect the day-to-day operations of companies."
+        },
+        {
+          "category": "Firm news",
+          "date": "2026.10.12",
+          "title": "Tsets Partners launches a new professional training program",
+          "intro": "Introducing an internal program focused on practical skills and research methods for emerging legal professionals."
+        },
+        {
+          "category": "Practical guidance",
+          "date": "2026.09.28",
+          "title": "A contract review checklist for every organization",
+          "intro": "Key questions to consider when updating rights, duties, timelines, payment terms, and liability provisions."
+        },
+        {
+          "category": "Event",
+          "date": "2026.09.15",
+          "title": "Open discussion on business and legal risk",
+          "intro": "Event information on legal risks encountered in real business settings and practical approaches to prevention."
+        }
+      ]
+    }
   },
   "interview": {
     "publishedAt": "June 10, 2025",

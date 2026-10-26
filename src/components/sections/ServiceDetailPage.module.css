@@ -53,8 +53,8 @@
 .introTitle h1 {
   max-width: 720px;
   margin: 0;
-  font-size: var(--type-page-title);
-  line-height: 1.08;
+  font-size: clamp(2.5rem, 3.35vw, 3.75rem);
+  line-height: 1.12;
   text-shadow: 0 18px 60px color-mix(in srgb, var(--gold) 12%, transparent);
 }
 
@@ -354,7 +354,7 @@
 
 @media (max-width: 600px) {
   .introTitle h1 {
-    font-size: var(--type-feature-title-mobile);
+    font-size: clamp(2.15rem, 7.5vw, 2.75rem);
   }
 
   .groupSummary {

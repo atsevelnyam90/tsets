@@ -4,19 +4,20 @@
 }
 .logoRow {
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   gap: 35px;
 }
-.logoRow p {
+.logoHeading {
+  grid-column: 1 / -1;
+  justify-self: center;
   margin: 0;
-  font-family: var(--font-display);
-  font-size: var(--type-body);
+  text-align: center;
 }
-.logoRow a {
+.logoItem {
   position: relative;
   display: flex;
-  min-height: 78px;
+  min-height: 90px;
   align-items: center;
   justify-content: center;
   padding: 14px;
@@ -29,7 +30,7 @@
     box-shadow 240ms ease,
     transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.logoRow a::after {
+.logoItem::after {
   position: absolute;
   right: 22%;
   bottom: 8px;
@@ -43,8 +44,8 @@
 }
 .logoRow img {
   width: 100%;
-  max-width: 115px;
-  height: 38px;
+  max-width: 145px;
+  height: 48px;
   object-fit: contain;
   opacity: 1;
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -52,16 +53,16 @@
 .logoRow .lightLogo img {
   filter: invert(1);
 }
-.logoRow a:focus-visible {
+.logoItem:focus-visible {
   border-color: rgb(198 167 94 / 58%);
   background: var(--warm);
   box-shadow: 0 14px 28px rgb(61 16 29 / 10%);
   transform: translateY(-4px);
 }
-.logoRow a:focus-visible::after {
+.logoItem:focus-visible::after {
   transform: scaleX(1);
 }
-.logoRow a:focus-visible img {
+.logoItem:focus-visible img {
   transform: scale(1.025);
 }
 .logoRow .lightLogo:focus-visible img {
@@ -69,16 +70,16 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .logoRow a:hover {
+  .logoItem:hover {
     border-color: rgb(198 167 94 / 58%);
     background: var(--warm);
     box-shadow: 0 14px 28px rgb(61 16 29 / 10%);
     transform: translateY(-4px);
   }
-  .logoRow a:hover::after {
+  .logoItem:hover::after {
     transform: scaleX(1);
   }
-  .logoRow a:hover img {
+  .logoItem:hover img {
     transform: scale(1.025);
   }
   .logoRow .lightLogo:hover img {
@@ -156,7 +157,7 @@
   .logoRow {
     grid-template-columns: repeat(3, 1fr);
   }
-  .logoRow p {
+  .logoHeading {
     grid-column: 1 / -1;
   }
   .libraryContact {
@@ -183,8 +184,8 @@
   .marqueeTrack {
     animation-play-state: paused;
   }
-  .logoRow a,
-  .logoRow a::after,
+  .logoItem,
+  .logoItem::after,
   .logoRow img {
     transition: none;
     animation: none;

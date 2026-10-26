@@ -15,9 +15,34 @@ Files were downloaded as compressed JPEGs from `images.pexels.com/photos/{photo-
 
 The service menu reuses the human-free `litigation.jpg`, `business-advice.avif`, and `ongoing-counsel.jpg` photos listed above. This source list covers only the replacement photos above.
 
-## Team avatars
+## Service menu photos
 
-`team-avatar-badamsuren.avif` was generated with OpenAI image generation on 2026-10-21. It is an illustrative avatar, not a photograph or likeness of a Tsets Partners team member.
+Downloaded from Wikimedia Commons and Pexels on 2026-10-23. These are real photographs selected to represent Mongolian law, court proceedings, investment, and financial work. Each image was center-cropped and resized to 880 × 1000 pixels for the service navigation; no generative AI was used.
+
+| Local file | Service | Photo and author | Source and license |
+| --- | --- | --- | --- |
+| `service-mongolia-legal-advisory.jpg` | Хууль зүйн зөвлөх үйлчилгээ | Original copy of the 1992 Constitution of Mongolia; author unknown | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Constitution_of_Mongolia.jpg), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and marked public domain in Mongolia |
+| `service-mongolia-enforcement.jpg` | Шүүхийн шийдвэр гүйцэтгэх ажиллагаа | Judge signing legal documents beside a gavel; Katrin Bolovtsova | [Pexels](https://www.pexels.com/photo/judge-signing-on-the-papers-6077447/), [Pexels License](https://www.pexels.com/license/) |
+| `service-mongolia-foreign-investment.jpg` | Гадаадын хөрөнгө оруулагчдад зориулсан зөвлөх үйлчилгээ | Business agreement and handshake; Pavel Danilyuk | [Pexels](https://www.pexels.com/photo/people-shaking-their-hands-in-close-deal-business-contract-8112180/), [Pexels License](https://www.pexels.com/license/) |
+| `service-mongolia-nbfi-recovery.jpg` | ББСБ-ын авлага барагдуулах үйлчилгээ | Financial documents and calculator; Mikhail Nilov | [Pexels](https://www.pexels.com/photo/a-person-working-on-the-documents-using-a-calculator-8297220/), [Pexels License](https://www.pexels.com/license/) |
+
+## Homepage imagery
+
+`legal-advisory-workspace.avif` is a human-free editorial image of a Mongolian legal workspace, generated with OpenAI image generation on 2026-10-23 and exported as an optimized AVIF. The final version removes the inaccurate emblem from the initial draft.
+
+## Team portraits
+
+`team-namuungoo.jpg` was extracted from the client-provided team CV PDF on 2026-10-23.
+
+`team-namuungoo-enhanced.jpg` is an identity-preserving resolution enhancement of `team-namuungoo.jpg`, generated with OpenAI image generation on 2026-10-23.
+
+## News images
+
+`news-building-rule-invalidated.jpg` was supplied by the client from the Tsets Partners Facebook post published on 2026-10-08: https://www.facebook.com/photo?fbid=122144679345039916&set=a.122099410641039916
+
+`news-building-rule-invalidated-enhanced.jpg` is an identity- and layout-preserving quality enhancement of the client-supplied image, generated with OpenAI image generation on 2026-10-23 and exported as an optimized JPEG. The original file remains available alongside it.
+
+`news-building-rule-invalidated-hero.jpg` is the optimized 16:9 top crop used on the news list and detail page; it preserves the subject and removes only the lower poster copy already rendered as accessible HTML on the page.
 
 ## Client logos
 

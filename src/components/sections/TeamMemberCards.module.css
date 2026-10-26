@@ -1,7 +1,23 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
+}
+
+.cardGrid {
+  display: grid;
+  min-width: 0;
+  gap: 24px;
+}
+
+.leadGrid {
+  grid-template-columns: repeat(2, minmax(0, calc((100% - 48px) / 3)));
+  column-gap: 64px;
+  justify-content: center;
+}
+
+.standardGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .card {
@@ -40,13 +56,16 @@
   display: grid;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   place-items: center;
-  background:
-    radial-gradient(circle at 50% 35%, rgb(198 167 94 / 22%), transparent 34%),
-    var(--forest);
-  color: var(--gold-light);
-  font-family: var(--font-display);
-  font-size: clamp(5rem, 9vw, 8rem);
+  background: #e4e6eb;
+  color: #bcc0c4;
+}
+
+.placeholder svg {
+  width: min(72%, 240px);
+  height: 82%;
+  align-self: end;
 }
 
 .card:hover .imageLink img,
@@ -85,7 +104,7 @@
 .profileLink {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   margin-top: 18px;
   color: var(--gold);
   font-size: var(--type-label);
@@ -94,7 +113,7 @@
 }
 
 .profileLink span {
-  font-size: var(--type-symbol-lg);
+  font-size: var(--type-symbol-sm);
   font-weight: 400;
   line-height: 0.6;
   transition: transform 200ms ease;
@@ -106,13 +125,19 @@
 }
 
 @media (max-width: 900px) {
-  .grid {
+  .leadGrid,
+  .standardGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leadGrid {
+    column-gap: 24px;
   }
 }
 
 @media (max-width: 520px) {
-  .grid {
+  .leadGrid,
+  .standardGrid {
     grid-template-columns: 1fr;
   }
 

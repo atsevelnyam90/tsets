@@ -1,5 +1,13 @@
 export const teamMembers = [
   {
+    slug: "ganchuluun-lkhagvajav",
+    image: null,
+  },
+  {
+    slug: "erdenebold-tsegmid",
+    image: "/images/team-erdenebold.avif",
+  },
+  {
     slug: "lkhagvasuren-ganbold",
     image: "/images/team-lkhagvasuren.avif",
   },
@@ -8,12 +16,28 @@ export const teamMembers = [
     image: "/images/team-bat-erdene.avif",
   },
   {
-    slug: "erdenebold-tsegmid",
-    image: "/images/team-erdenebold.avif",
+    slug: "myadagmaa-bat-erdene",
+    image: null,
   },
   {
-    slug: "myadagmaa-bat-erdene",
-    image: "/images/team-avatar-badamsuren.avif",
+    slug: "oyunzul-baasandorj",
+    image: null,
+  },
+  {
+    slug: "tamir-batdelger",
+    image: null,
+  },
+  {
+    slug: "dugarmaa-enkhbat",
+    image: "/images/team-dugarmaa.avif",
+  },
+  {
+    slug: "khuslen-gantor",
+    image: "/images/team-khuslen.avif",
+  },
+  {
+    slug: "namuungoo-ganchuluun",
+    image: "/images/team-namuungoo-enhanced.jpg",
   },
   {
     slug: "ariunsanaa-oyun-erdene",
@@ -24,16 +48,8 @@ export const teamMembers = [
     image: "/images/team-narangerel.avif",
   },
   {
-    slug: "dugarmaa-enkhbat",
-    image: "/images/team-dugarmaa.avif",
-  },
-  {
     slug: "bayarmaa-nyamlhagva",
     image: "/images/team-bayarmaa.avif",
-  },
-  {
-    slug: "khuslen-gantor",
-    image: "/images/team-khuslen.avif",
   },
 ] as const;
 

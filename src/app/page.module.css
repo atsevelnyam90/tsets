@@ -165,11 +165,31 @@
 .strengthIntro h2 {
   margin: 0;
 }
-.strengthIntro > p {
+.statementQuote {
+  position: relative;
+  margin: 0;
+  padding-left: clamp(46px, 4vw, 62px);
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.7;
+}
+.statementQuote::before {
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  color: var(--gold);
+  content: "“";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.75rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.strengthIntro > .statementQuote {
   max-width: 610px;
   margin: 0 0 10px;
   color: var(--muted);
-  line-height: 1.75;
 }
 .strengthGrid {
   display: grid;
@@ -224,10 +244,12 @@
   font-weight: 700;
   letter-spacing: 0.14em;
 }
-.strengthIcon {
-  width: 38px;
-  height: 38px;
-  padding: 9px;
+.strengthLogo {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  place-items: center;
   border: 1px solid var(--strength-border);
   border-radius: 50%;
   color: var(--strength-accent);
@@ -235,7 +257,11 @@
     background-color 260ms ease,
     border-color 260ms ease;
 }
-.strengthGrid article:hover .strengthIcon {
+.strengthLogo svg {
+  width: 30px;
+  height: 30px;
+}
+.strengthGrid article:hover .strengthLogo {
   border-color: var(--strength-accent);
   background: color-mix(in srgb, var(--strength-accent) 10%, transparent);
 }
@@ -300,11 +326,9 @@
   max-width: 560px;
   margin: 0;
 }
-.darkIntro p {
+.darkIntro .statementQuote {
   max-width: 550px;
-  margin: 0;
   color: var(--on-dark-muted);
-  line-height: 1.8;
 }
 .gallery {
   display: grid;
@@ -338,30 +362,57 @@
 }
 .testimonial {
   display: flex;
-  max-width: 850px;
+  max-width: 960px;
   flex-direction: column;
   align-items: center;
   padding: 120px 0;
   text-align: center;
 }
-.testimonial svg {
+.quoteMark {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
   color: var(--gold);
 }
-.stars {
-  margin: 20px 0;
-  color: var(--gold);
-  letter-spacing: 4px;
+.quoteMark::before,
+.quoteMark::after {
+  height: 1px;
+  flex: 1;
+  background: color-mix(in srgb, var(--gold) 62%, transparent);
+  content: "";
+}
+.quoteMark svg {
+  box-sizing: content-box;
+  flex: 0 0 auto;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--gold) 72%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--gold) 8%, transparent);
 }
 .testimonial blockquote {
-  margin: 0 0 25px;
+  max-width: 880px;
+  margin: 42px 0 30px;
   font-family: var(--font-display);
   font-size: var(--type-quote);
   line-height: 1.4;
+  text-wrap: balance;
 }
 .testimonial strong {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: var(--type-small);
 }
+.testimonial strong::before,
+.testimonial strong::after {
+  width: 18px;
+  height: 1px;
+  background: var(--gold);
+  content: "";
+}
 .testimonial span {
+  margin-top: 4px;
   color: var(--on-dark-muted);
   font-size: var(--type-caption);
 }
@@ -473,8 +524,18 @@
   .strengths {
     padding-top: 90px;
   }
+  .statementQuote {
+    padding-left: 42px;
+    font-size: var(--type-body);
+  }
   .gallery {
     grid-template-columns: 1fr;
+  }
+  .testimonial {
+    padding: 90px 0;
+  }
+  .testimonial blockquote {
+    margin-top: 34px;
   }
   .expertiseImage,
   .homeContactImage {
