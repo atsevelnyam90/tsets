@@ -18,6 +18,7 @@ export function LocalizedNewsArticle({ slug }: { slug: NewsArticleSlug }) {
   const isVideo = articleRef.section === "video";
 
   const article = (() => {
+    if (articleRef.section === "featured") return news.featured;
     if (articleRef.section === "lead") return news.lead;
     if (articleRef.section === "top") {
       return news.topStories.items[articleRef.index] ?? news.lead;
@@ -49,15 +50,25 @@ export function LocalizedNewsArticle({ slug }: { slug: NewsArticleSlug }) {
     : undefined;
   const leadDetail =
     articleRef.section === "lead" ? news.article.leadDetail : undefined;
+  const featuredDetail =
+    articleRef.section === "featured" ? news.article.featuredDetail : undefined;
   const articleBody = isVideo
     ? (videoDetail?.body ?? news.article.videoBody)
-    : (leadDetail?.body ?? news.article.body);
+    : (featuredDetail?.body ?? leadDetail?.body ?? news.article.body);
   const articleKeyPoints =
-    videoDetail?.keyPoints ?? leadDetail?.keyPoints ?? news.article.keyPoints;
-  const overviewTitle = leadDetail?.overviewTitle ?? news.article.overviewTitle;
+    videoDetail?.keyPoints ??
+    featuredDetail?.keyPoints ??
+    leadDetail?.keyPoints ??
+    news.article.keyPoints;
+  const overviewTitle =
+    featuredDetail?.overviewTitle ??
+    leadDetail?.overviewTitle ??
+    news.article.overviewTitle;
   const implementationTitle =
-    leadDetail?.implementationTitle ?? news.article.implementationTitle;
-  const sectionBreak = isVideo ? 2 : leadDetail ? 4 : 3;
+    featuredDetail?.implementationTitle ??
+    leadDetail?.implementationTitle ??
+    news.article.implementationTitle;
+  const sectionBreak = isVideo ? 2 : featuredDetail ? 3 : leadDetail ? 4 : 3;
   const firstSection = articleBody.slice(0, sectionBreak);
   const secondSection = articleBody.slice(sectionBreak);
   const media = newsDetailMedia[slug];

@@ -16,9 +16,9 @@ export function SiteFooter() {
           <Link href="/" aria-label={header.logoLabel}>
             <Image
               alt="Tsets Partners"
-              height={256}
-              src="/images/tsets-logo-transparent.png"
-              width={256}
+              height={458}
+              src="/images/tsets-logo.png"
+              width={298}
             />
           </Link>
           <p>{footer.description}</p>

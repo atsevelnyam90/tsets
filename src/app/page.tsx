@@ -118,9 +118,9 @@ export default function HomePage() {
                     alt=""
                     aria-hidden="true"
                     className={styles.strengthLogo}
-                    height={256}
-                    src="/images/tsets-logo-transparent.png"
-                    width={256}
+                    height={458}
+                    src="/images/tsets-logo.png"
+                    width={298}
                   />
                 </div>
                 <span className={styles.strengthKicker}>{item.kicker}</span>

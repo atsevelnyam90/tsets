@@ -170,10 +170,10 @@ export function SiteHeader() {
         <Link className={styles.logo} href="/" aria-label={header.logoLabel}>
           <Image
             alt="Tsets Partners"
-            height={256}
+            height={458}
             priority
-            src="/images/tsets-logo-transparent.png"
-            width={256}
+            src="/images/tsets-logo.png"
+            width={298}
           />
         </Link>
 
@@ -251,9 +251,9 @@ export function SiteHeader() {
                       <Image
                         alt=""
                         aria-hidden="true"
-                        height={256}
-                        src="/images/tsets-logo-transparent.png"
-                        width={256}
+                        height={458}
+                        src="/images/tsets-logo.png"
+                        width={298}
                       />
                       <strong>{branch}</strong>
                       <span>{header.branches.comingSoon}</span>

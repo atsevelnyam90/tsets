@@ -12,8 +12,8 @@
 }
 
 .brand img {
-  width: 96px;
-  height: auto;
+  width: auto;
+  height: 96px;
   filter: brightness(0) invert(1);
 }
 .brand p {

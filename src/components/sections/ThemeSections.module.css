@@ -2,16 +2,19 @@
   padding: 65px 0;
   background: #fff;
 }
-.logoRow {
+.logoTrack {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   gap: 35px;
 }
+.logoSlide {
+  display: contents;
+}
 .logoHeading {
-  grid-column: 1 / -1;
-  justify-self: center;
-  margin: 0;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto 35px;
   text-align: center;
 }
 .logoItem {
@@ -42,7 +45,7 @@
   transform: scaleX(0);
   transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.logoRow img {
+.logoTrack img {
   width: 100%;
   max-width: 145px;
   height: 48px;
@@ -50,7 +53,7 @@
   opacity: 1;
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-.logoRow .lightLogo img {
+.logoTrack .lightLogo img {
   filter: invert(1);
 }
 .logoItem:focus-visible {
@@ -65,8 +68,11 @@
 .logoItem:focus-visible img {
   transform: scale(1.025);
 }
-.logoRow .lightLogo:focus-visible img {
+.logoTrack .lightLogo:focus-visible img {
   filter: invert(1);
+}
+.logoControls {
+  display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -82,7 +88,7 @@
   .logoItem:hover img {
     transform: scale(1.025);
   }
-  .logoRow .lightLogo:hover img {
+  .logoTrack .lightLogo:hover img {
     filter: invert(1);
   }
 }
@@ -121,11 +127,8 @@
 }
 
 @media (max-width: 800px) {
-  .logoRow {
+  .logoTrack {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .logoHeading {
-    grid-column: 1 / -1;
   }
   .libraryContact {
     min-height: 0;
@@ -140,17 +143,112 @@
   }
 }
 
-@media (max-width: 480px) {
-  .logoRow {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+@media (max-width: 600px) {
+  .logos {
+    padding: 48px 0;
+  }
+  .logoHeading {
+    margin-bottom: 24px;
+  }
+  .logoTrack {
+    display: flex;
+    gap: 14px;
+    padding: 4px 2px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: 2px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+  .logoTrack::-webkit-scrollbar {
+    display: none;
+  }
+  .logoSlide {
+    display: grid;
+    min-width: 0;
+    flex: 0 0 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  .logoItem {
+    min-height: 108px;
+    min-width: 0;
+    border-color: var(--line);
+    background: var(--paper);
+  }
+  .logoControls {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .logoArrow {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--paper);
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+  .logoArrow:disabled {
+    color: var(--mist);
+    cursor: default;
+    opacity: 0.55;
+  }
+  .logoDots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logoDot {
+    position: relative;
+    width: 24px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .logoDot::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--line);
+    content: "";
+    transform: translate(-50%, -50%);
+    transition:
+      width 180ms ease,
+      background-color 180ms ease;
+  }
+  .logoDot[aria-current="true"]::after {
+    width: 18px;
+    background: var(--gold);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .logoItem,
   .logoItem::after,
-  .logoRow img {
+  .logoTrack img,
+  .logoArrow,
+  .logoDot::after {
     transition: none;
     animation: none;
   }

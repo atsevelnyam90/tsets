@@ -24,6 +24,18 @@ type NewsCard = {
 
 export default function NewsPage() {
   const { news } = useSiteMessages();
+  const featuredItem: NewsCard = {
+    category: news.featured.category,
+    date: news.featured.date,
+    href: `/news/${newsContent.featuredSlug}`,
+    intro: news.featured.intro,
+    kind: "article",
+    sourceUrl: "https://www.facebook.com/share/1DqzJrTJgB/?mibextid=wwXIfr",
+    thumbnailUrl: "/images/news-sports-arbitration-autumn-training.jpg",
+    title: news.featured.title,
+    tone: "forest",
+    visual: true,
+  };
   const videoItems: NewsCard[] = news.videos.items.map((item, index) => ({
     ...item,
     date: newsContent.videoDates[index],
@@ -54,7 +66,7 @@ export default function NewsPage() {
     tone: "burgundy",
     visual: true,
   };
-  const cards = [leadItem, ...videoItems].sort((first, second) =>
+  const cards = [featuredItem, leadItem, ...videoItems].sort((first, second) =>
     second.date.localeCompare(first.date),
   );
 

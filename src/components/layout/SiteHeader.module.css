@@ -23,8 +23,8 @@
 
 .logo img {
   display: block;
-  width: 68px;
-  height: auto;
+  width: auto;
+  height: 68px;
 }
 
 .desktopNav {
@@ -32,7 +32,7 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  gap: clamp(12px, 1.2vw, 24px);
+  gap: clamp(8px, 0.8vw, 16px);
 }
 
 .desktopNav > a,
@@ -670,7 +670,7 @@
     padding-inline: 12px;
   }
   .logo img {
-    width: 54px;
+    height: 54px;
   }
   .mobileMenu summary {
     gap: 6px;

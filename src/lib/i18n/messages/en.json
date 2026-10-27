@@ -100,6 +100,8 @@
   },
   "shared": {
     "clients": "Client Organizations",
+    "carouselPrevious": "Previous clients",
+    "carouselNext": "Next clients",
     "clientLogoAlt": "Client organization logo",
     "contactEyebrow": "Do you need legal advice?",
     "contactTitle": "GET IN TOUCH"
@@ -634,6 +636,12 @@
       "title": "News & Insights",
       "intro": "Legal updates, practical guidance, firm news, and video content."
     },
+    "featured": {
+      "category": "Sports arbitration · Training",
+      "title": "Mongolian International and National Sports Arbitration successfully holds its regular autumn training",
+      "intro": "A regular training session covering sports arbitration, updated international anti-doping standards and rules, and dispute resolution procedures.",
+      "date": "2026.10.24"
+    },
     "lead": {
       "category": "Court decision · Construction law",
       "visualLabel": "Court decision",
@@ -696,6 +704,26 @@
       "back": "Back to News & Insights",
       "readingTime": "6 min read",
       "sourceLabel": "View the original post on Facebook",
+      "featuredDetail": {
+        "overviewTitle": "About the training",
+        "implementationTitle": "Participation and next steps",
+        "body": [
+          "The regular autumn training organized by Mongolian International and National Sports Arbitration concluded successfully on October 24, 2026.",
+          "Through presentations and discussions, the training introduced participants to recent updates to international standards, rules, and regulations relevant to sports arbitration, as well as dispute resolution procedures, with the aim of strengthening their professional knowledge and skills.",
+          "The program covered key anti-doping topics, including the International Standard for Therapeutic Use Exemptions (ISTUE), the revised 2027 World Anti-Doping Code, and the updated International Standard for Testing and Investigations. It also addressed preliminary and substantive arbitration hearings, procedural rules, and amendments to the case adjudication and cost rules, broadening participants’ understanding of sports arbitration practice.",
+          "Leaders and arbitrators of Mongolian International and National Sports Arbitration, together with representatives of its Anti-Doping Appeal Commission, took part in the training. Participants shared professional knowledge and practical experience and strengthened the expertise required to resolve sports disputes independently, fairly, and in line with international standards.",
+          "The training concluded with an oath-taking ceremony, the presentation of appointment certificates to arbitrators and commission members, and the awarding of completion certificates to participants.",
+          "Mongolian International and National Sports Arbitration will continue to organize training and professional activities to uphold fairness and justice in sport, improve the quality and accessibility of arbitration, and promote the adoption of international standards and leading practices.",
+          "For fair sport!"
+        ],
+        "keyPoints": [
+          "International Standard for Therapeutic Use Exemptions (ISTUE) — arbitrator N. Ariunzaya.",
+          "Revised 2027 World Anti-Doping Code — E. Zoljargal, Chair of the Anti-Doping Appeal Commission.",
+          "WADA’s updated International Standard for Testing and Investigations — commission member Kh. Bakytzhan.",
+          "Key considerations in sports arbitration proceedings — Secretary-General Ch. Gunjdagva.",
+          "Amendments to the sports arbitration case adjudication and cost rules — President G. Batzaya."
+        ]
+      },
       "leadDetail": {
         "overviewTitle": "Background to the dispute",
         "implementationTitle": "Legal effect of the decision",

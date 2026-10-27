@@ -1,4 +1,5 @@
 export const newsContent = {
+  featuredSlug: "sports-arbitration-autumn-training",
   leadSlug: "government-building-rule-invalidated",
   latestSlugs: [
     "business-legal-changes",
@@ -25,6 +26,7 @@ export const newsContent = {
 } as const;
 
 const newsArticleSlugs = [
+  newsContent.featuredSlug,
   newsContent.leadSlug,
   ...newsContent.topStorySlugs,
   ...newsContent.mostReadSlugs,
@@ -44,6 +46,10 @@ type NewsDetailMedia = {
 export const newsDetailMedia: Partial<
   Record<NewsArticleSlug, NewsDetailMedia>
 > = {
+  [newsContent.featuredSlug]: {
+    images: ["/images/news-sports-arbitration-autumn-training.jpg"],
+    sourceUrl: "https://www.facebook.com/share/1DqzJrTJgB/?mibextid=wwXIfr",
+  },
   [newsContent.leadSlug]: {
     images: ["/images/news-building-rule-invalidated-hero.jpg"],
     position: "top",
@@ -66,6 +72,10 @@ export function isNewsArticleSlug(value: string): value is NewsArticleSlug {
 }
 
 export function getNewsArticleRef(slug: NewsArticleSlug) {
+  if (slug === newsContent.featuredSlug) {
+    return { index: 0, section: "featured" } as const;
+  }
+
   if (slug === newsContent.leadSlug) {
     return { index: 0, section: "lead" } as const;
   }
