@@ -388,7 +388,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "甘博勒德·拉格瓦苏伦（Lkhagvasuren Ganbold）是 Tsets Partners 律师事务所的创始人兼执行董事。他是一位拥有 12 年执业经验的律师，擅长保险法和商业法领域。"
+            "text": "（Lkhagvasuren Ganbold）是 Tsets Partners 律师事务所的创始人兼执行董事。他是一位拥有 12 年执业经验的律师，擅长保险法和商业法领域。"
           },
           {
             "type": "paragraph",
@@ -406,7 +406,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "巴亚尔赛罕·巴特额尔德尼（Bat-Erdene Bayarsaikhan）是 Tsets Partners 律师事务所的联合创始人。他是一位拥有 12 年执业经验的律师，精通刑法、商业法和公司法。他拥有扎萨克法律学院的法学学士和法学硕士学位。他是蒙古律师协会和蒙古辩护士协会的会员。"
+            "text": "（Bat-Erdene Bayarsaikhan）是 Tsets Partners 律师事务所的联合创始人。他是一位拥有 12 年执业经验的律师，精通刑法、商业法和公司法。他拥有扎萨克法律学院的法学学士和法学硕士学位。他是蒙古律师协会和蒙古辩护士协会的会员。"
           }
         ]
       },
@@ -453,13 +453,13 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "巴特额尔德尼·米亚达格玛（Myadagmaa Bat-Erdene）是一位拥有 10 年执业经验的律师，擅长公司法、劳动法及法律咨询业务。在 Cets Partners 律师事务所，她主要负责公司法律咨询、企业合规文件起草以及代表客户处理公司间纠纷。她毕业于扎萨克法律学院法学专业，是蒙古律师协会和蒙古辩护士协会的会员律师。"
+            "text": "（Myadagmaa Bat-Erdene）是一位拥有 10 年执业经验的律师，擅长公司法、劳动法及法律咨询业务。在 Tsets Partners 律师事务所，她主要负责公司法律咨询、企业合规文件起草以及代表客户处理公司间纠纷。她毕业于扎萨克法律学院法学专业，是蒙古律师协会和蒙古辩护士协会的会员律师。"
           }
         ]
       },
       "ariunsanaa-oyun-erdene": {
         "name": "O. Ariunsanaa",
-        "role": "法律助理",
+        "role": "律师助理",
         "bio": [
           {
             "type": "paragraph",
@@ -473,7 +473,7 @@
       },
       "narangerel-amarsaikhan": {
         "name": "A. Narangerel",
-        "role": "法律助理",
+        "role": "律师助理",
         "bio": [
           {
             "type": "paragraph",
@@ -483,7 +483,7 @@
       },
       "dugarmaa-enkhbat": {
         "name": "E. Dugarmaa",
-        "role": "法律助理",
+        "role": "律师助理",
         "bio": [
           {
             "type": "paragraph",
@@ -493,17 +493,17 @@
       },
       "bayarmaa-nyamlhagva": {
         "name": "N. Bayarmaa",
-        "role": "法律助理",
+        "role": "律师助理",
         "bio": [
           {
             "type": "paragraph",
-            "text": "Bayarmaa Nyamlkhagva 毕业于伊赫扎萨格大学法学院，获得法学学位。主要执业领域为公司法和商法。"
+            "text": "Bayarmaa Nymlkhagva 毕业于伊赫扎萨格大学法学院，获得法学学位。主要执业领域为公司法和商法。"
           }
         ]
       },
       "khuslen-gantor": {
         "name": "G. Khuslen",
-        "role": "法律助理",
+        "role": "律师助理",
         "bio": [
           {
             "type": "paragraph",
@@ -517,7 +517,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "拉哈格瓦扎布·冈楚伦（Lhagvajav Ganchuluun）是 Tsets Partners 律师事务所的联合创始人之一兼首席顾问，同时也是蒙古律师协会的会员律师。"
+            "text": "（Ganchuluun Lhagvajav）是 Tsets Partners 律师事务所的联合创始人之一兼首席顾问，同时也是蒙古律师协会的会员律师。"
           }
         ]
       },
@@ -527,7 +527,7 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "巴特德勒格尔·塔米尔（Batdelgeriin Tamir）是一位拥有 10 年执业经验的执业律师，擅长商事法与公司法领域。他毕业于蒙古国立大学，获得法学学士学位。他同时也是蒙古律师协会和蒙古辩护律师协会的会员律师。"
+            "text": "（Tamir Batdelger）是一位拥有 10 年执业经验的执业律师，擅长商事法与公司法领域。他毕业于蒙古国立大学，获得法学学士学位。他同时也是蒙古律师协会和蒙古辩护律师协会的会员律师。"
           }
         ]
       },
@@ -537,13 +537,13 @@
         "bio": [
           {
             "type": "paragraph",
-            "text": "巴桑多尔吉·奥云祖勒（Baasandorjiin Oyunzul）是一位拥有 9 年执业经验的执业律师，擅长民事法领域。她毕业于伊赫扎萨克国际大学法律学院，获得法学学士学位。她同时也是蒙古律师协会和蒙古辩护律师协会的会员律师。"
+            "text": "（Oyunzul Baasandorj）是一位拥有 9 年执业经验的执业律师，擅长民事法领域。她毕业于伊赫扎萨克国际大学法律学院，获得法学学士学位。她同时也是蒙古律师协会和蒙古辩护律师协会的会员律师。"
           }
         ]
       },
       "namuungoo-ganchuluun": {
         "name": "G. Namuungoo",
-        "role": "法律助理",
+        "role": "律师助理",
         "bio": [
           {
             "type": "paragraph",
