@@ -1,4 +1,12 @@
 export const newsContent = {
+  document: {
+    category: "Investment and business law",
+    date: "2026.10.27",
+    href: "/documents/Mongolia_Investment_and_Business_Law_Update_2026.pdf",
+    intro:
+      "Enacted changes, implementation dates, and investor actions | 2024–2026",
+    title: "Mongolia Investment and Business Law Update 2026",
+  },
   featuredSlug: "sports-arbitration-autumn-training",
   leadSlug: "government-building-rule-invalidated",
   latestSlugs: [

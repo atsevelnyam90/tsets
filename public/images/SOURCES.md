@@ -38,6 +38,8 @@ Downloaded from Wikimedia Commons and Pexels on 2026-10-23. These are real photo
 
 ## Team portraits
 
+`team-myadagmaa.jpg` was supplied directly by the client on 2026-10-27.
+
 `team-namuungoo.jpg` was extracted from the client-provided team CV PDF on 2026-10-23.
 
 `team-namuungoo-enhanced.jpg` is an identity-preserving resolution enhancement of `team-namuungoo.jpg`, generated with OpenAI image generation on 2026-10-23.

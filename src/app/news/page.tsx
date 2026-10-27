@@ -13,8 +13,8 @@ type NewsCard = {
   duration?: string;
   href: string;
   intro: string;
-  kind: "article" | "video";
-  sourceUrl: string;
+  kind: "article" | "document" | "video";
+  sourceUrl?: string;
   title: string;
   thumbnailUrl?: string;
   thumbnailPosition?: "top";
@@ -24,6 +24,12 @@ type NewsCard = {
 
 export default function NewsPage() {
   const { news } = useSiteMessages();
+  const documentItem: NewsCard = {
+    ...newsContent.document,
+    kind: "document",
+    tone: "ink",
+    visual: false,
+  };
   const featuredItem: NewsCard = {
     category: news.featured.category,
     date: news.featured.date,
@@ -66,8 +72,8 @@ export default function NewsPage() {
     tone: "burgundy",
     visual: true,
   };
-  const cards = [featuredItem, leadItem, ...videoItems].sort((first, second) =>
-    second.date.localeCompare(first.date),
+  const cards = [documentItem, featuredItem, leadItem, ...videoItems].sort(
+    (first, second) => second.date.localeCompare(first.date),
   );
 
   return (
@@ -103,23 +109,40 @@ export default function NewsPage() {
                     <span>{item.category}</span>
                   </div>
                   <h2>
-                    <Link href={item.href}>{item.title}</Link>
+                    <Link
+                      href={item.href}
+                      rel={item.kind === "document" ? "noreferrer" : undefined}
+                      target={item.kind === "document" ? "_blank" : undefined}
+                    >
+                      {item.title}
+                    </Link>
                   </h2>
                   <p>{item.intro}</p>
                   <div className={styles.cardActions}>
-                    <Link className={styles.cardAction} href={item.href}>
-                      {news.latest.read}
-                      <ArrowRight aria-hidden="true" size={17} />
-                    </Link>
-                    <a
-                      className={styles.sourceAction}
-                      href={item.sourceUrl}
-                      rel="noreferrer"
-                      target="_blank"
+                    <Link
+                      className={styles.cardAction}
+                      href={item.href}
+                      rel={item.kind === "document" ? "noreferrer" : undefined}
+                      target={item.kind === "document" ? "_blank" : undefined}
                     >
-                      {news.latest.source}
-                      <ExternalLink aria-hidden="true" size={15} />
-                    </a>
+                      {news.latest.read}
+                      {item.kind === "document" ? (
+                        <ExternalLink aria-hidden="true" size={15} />
+                      ) : (
+                        <ArrowRight aria-hidden="true" size={17} />
+                      )}
+                    </Link>
+                    {item.sourceUrl ? (
+                      <a
+                        className={styles.sourceAction}
+                        href={item.sourceUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        {news.latest.source}
+                        <ExternalLink aria-hidden="true" size={15} />
+                      </a>
+                    ) : null}
                   </div>
                 </div>
 
@@ -131,6 +154,8 @@ export default function NewsPage() {
                     data-kind={item.kind}
                     data-tone={item.tone}
                     href={item.href}
+                    rel={item.kind === "document" ? "noreferrer" : undefined}
+                    target={item.kind === "document" ? "_blank" : undefined}
                   >
                     {item.thumbnailUrl ? (
                       <span

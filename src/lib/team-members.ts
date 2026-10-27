@@ -17,7 +17,7 @@ export const teamMembers = [
   },
   {
     slug: "myadagmaa-bat-erdene",
-    image: null,
+    image: "/images/team-myadagmaa.jpg",
   },
   {
     slug: "oyunzul-baasandorj",
